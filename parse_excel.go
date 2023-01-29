@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+	"sync"
 
 	"github.com/xuri/excelize/v2"
 )
@@ -70,6 +71,12 @@ type CereriStateData struct {
 	online      int
 	ghiseu      int
 	total       int
+}
+
+type ParseResult struct {
+	dataType string
+	dateKey  string
+	data     []StateData
 }
 
 func (data *VanzariStateData) printData() string {
@@ -208,17 +215,21 @@ func parseExcelCereri(rows [][]string) []StateData {
 	return data
 }
 
-func parseExcel(url string, dataType string) ([]StateData, error) {
-	body, ok := requestPage(url)
+func parseExcel(excelUrl *ExcelUrl, dataChannel chan<- *ParseResult, wg *sync.WaitGroup) {
+	fmt.Printf("Parsing excel %s, %s - %s\n", excelUrl.month, excelUrl.year, excelUrl.name)
+	defer wg.Done()
+
+	body, ok := requestPage(excelUrl.url)
 	if !ok {
-		return make([]StateData, 0), fmt.Errorf("requested page could not be found: %s", url)
+		fmt.Printf("requested page could not be found: %s\n", excelUrl.url)
+		return
 	}
 	defer body.Close()
 
 	doc, err := excelize.OpenReader(body)
 	if err != nil {
 		fmt.Printf("An error occurred while reading excel file: %v\n", err)
-		return make([]StateData, 0), err
+		return
 	}
 	defer doc.Close()
 
@@ -226,11 +237,11 @@ func parseExcel(url string, dataType string) ([]StateData, error) {
 	rows, err := doc.GetRows(sheetName)
 	if err != nil {
 		fmt.Println(err)
-		return make([]StateData, 0), err
+		return
 	}
 
 	var data []StateData
-	switch dataType {
+	switch excelUrl.name {
 	case "VANZARI":
 		data = parseExcelVanzari(rows)
 	case "IPOTECI":
@@ -239,26 +250,35 @@ func parseExcel(url string, dataType string) ([]StateData, error) {
 		data = parseExcelCereri(rows)
 	}
 
-	return data, nil
+	dateKey := fmt.Sprintf("%s, %s", excelUrl.month, excelUrl.year)
+	dataChannel <- &ParseResult{
+		dataType: excelUrl.name,
+		dateKey:  dateKey,
+		data:     data,
+	}
 }
 
 func getDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData {
 	data := make(map[string]map[string][]StateData)
 
+	dataChannel := make(chan *ParseResult)
+	var wg sync.WaitGroup
+
 	for _, excelUrl := range excelUrls {
-		fmt.Printf("Parsing excel %s, %s - %s\n", excelUrl.month, excelUrl.year, excelUrl.name)
+		wg.Add(1)
+		go parseExcel(excelUrl, dataChannel, &wg)
+	}
 
-		dateKey := fmt.Sprintf("%s, %s", excelUrl.month, excelUrl.year)
-		if data[dateKey] == nil {
-			data[dateKey] = make(map[string][]StateData, 0)
+	go func() {
+		wg.Wait()
+		close(dataChannel)
+	}()
+
+	for receivedData := range dataChannel {
+		if data[receivedData.dateKey] == nil {
+			data[receivedData.dateKey] = make(map[string][]StateData)
 		}
-
-		currentData, err := parseExcel(excelUrl.url, excelUrl.name)
-		data[dateKey][excelUrl.name] = currentData
-
-		if err != nil {
-			fmt.Println(err)
-		}
+		data[receivedData.dateKey][receivedData.dataType] = receivedData.data
 	}
 
 	return data

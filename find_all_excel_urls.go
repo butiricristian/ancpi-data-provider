@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"strings"
+	"sync"
 
 	"golang.org/x/net/html"
 )
@@ -142,38 +143,56 @@ func addMonthAndYearToUrls(urls []*ExcelUrl, month string, year string) {
 	}
 }
 
-func getUrls(month string, year string) []*ExcelUrl {
+func sendUrls(urls []*ExcelUrl, urlsChannel chan<- *ExcelUrl, month string, year string) {
+	addMonthAndYearToUrls(urls, month, year)
+	for _, url := range urls {
+		urlsChannel <- url
+	}
+}
+
+func getUrls(month string, year string, urlsChannel chan<- *ExcelUrl, wg *sync.WaitGroup) {
+	defer wg.Done()
 	urls, ok := getUrlsFromLink(fmt.Sprintf("https://www.ancpi.ro/statistica-%s-%s/", month, year))
 	if ok {
-		addMonthAndYearToUrls(urls, month, year)
-		return urls
+		sendUrls(urls, urlsChannel, month, year)
+		return
 	}
 
 	fmt.Println("Retrying with second URL version")
 	urls, ok = getUrlsFromLink(fmt.Sprintf("https://www.ancpi.ro/statistica-%s-%s/", month[0:3], year))
 	if ok {
-		addMonthAndYearToUrls(urls, month, year)
-		return urls
+		sendUrls(urls, urlsChannel, month, year)
+		return
 	}
 
 	fmt.Println("Retrying with third URL version")
 	urls, ok = getUrlsFromLink(fmt.Sprintf("https://www.ancpi.ro/statistici-%s-%s/", month, year))
 	if ok {
-		addMonthAndYearToUrls(urls, month, year)
-		return urls
+		sendUrls(urls, urlsChannel, month, year)
+		return
 	}
-
-	return make([]*ExcelUrl, 0)
 }
 
 func findAllExcelUrls() []*ExcelUrl {
 	var excelUrls []*ExcelUrl
 
+	urlsChannel := make(chan *ExcelUrl)
+	var wg sync.WaitGroup
+
 	for _, year := range getYears() {
 		for _, month := range getMonths() {
-			urls := getUrls(month, year)
-			excelUrls = append(excelUrls, urls...)
+			wg.Add(1)
+			go getUrls(month, year, urlsChannel, &wg)
 		}
+	}
+
+	go func() {
+		wg.Wait()
+		close(urlsChannel)
+	}()
+
+	for url := range urlsChannel {
+		excelUrls = append(excelUrls, url)
 	}
 
 	return excelUrls
