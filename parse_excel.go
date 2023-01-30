@@ -7,6 +7,7 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/schollz/progressbar/v3"
 	"github.com/xuri/excelize/v2"
 )
 
@@ -222,7 +223,7 @@ func parseExcelCereri(rows [][]string) []StateData {
 }
 
 func parseExcel(excelUrl *ExcelUrl, dataChannel chan<- *ParseResult, wg *sync.WaitGroup) {
-	fmt.Printf("Parsing excel %s, %s - %s\n", excelUrl.month, excelUrl.year, excelUrl.name)
+	// fmt.Printf("Parsing excel %s, %s - %s\n", excelUrl.month, excelUrl.year, excelUrl.name)
 	defer wg.Done()
 
 	body, ok := requestPage(excelUrl.url)
@@ -280,30 +281,37 @@ func getDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData 
 		close(dataChannel)
 	}()
 
+	total := len(excelUrls)
+	bar := progressbar.NewOptions(
+		total,
+		progressbar.OptionUseANSICodes(true),
+		progressbar.OptionSetDescription("[2/2] Parsing excels: "),
+	)
 	for receivedData := range dataChannel {
 		if data[receivedData.dateKey] == nil {
 			data[receivedData.dateKey] = make(map[string][]StateData)
 		}
 		data[receivedData.dateKey][receivedData.dataType] = receivedData.data
+		bar.Add(1)
 	}
 
 	return data
 }
 
-func printData(data map[string]map[string][]StateData) {
-	for date, dateValues := range data {
-		fmt.Printf("\n%s - VANZARI: \n", date)
-		for _, stateData := range dateValues["VANZARI"] {
-			fmt.Printf("%v", stateData.printData())
-		}
-		fmt.Printf("\n%s - IPOTECI: \n", date)
-		for _, stateData := range dateValues["IPOTECI"] {
-			fmt.Printf("%v", stateData.printData())
-		}
-		fmt.Printf("\n%s - CERERI: \n", date)
-		for _, stateData := range dateValues["CERERI"] {
-			fmt.Printf("%v", stateData.printData())
-		}
-		fmt.Println()
-	}
-}
+// func printData(data map[string]map[string][]StateData) {
+// 	for date, dateValues := range data {
+// 		fmt.Printf("\n%s - VANZARI: \n", date)
+// 		for _, stateData := range dateValues["VANZARI"] {
+// 			fmt.Printf("%v", stateData.printData())
+// 		}
+// 		fmt.Printf("\n%s - IPOTECI: \n", date)
+// 		for _, stateData := range dateValues["IPOTECI"] {
+// 			fmt.Printf("%v", stateData.printData())
+// 		}
+// 		fmt.Printf("\n%s - CERERI: \n", date)
+// 		for _, stateData := range dateValues["CERERI"] {
+// 			fmt.Printf("%v", stateData.printData())
+// 		}
+// 		fmt.Println()
+// 	}
+// }

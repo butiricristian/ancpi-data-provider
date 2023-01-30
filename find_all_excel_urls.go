@@ -6,6 +6,7 @@ import (
 	"strings"
 	"sync"
 
+	"github.com/schollz/progressbar/v3"
 	"golang.org/x/net/html"
 )
 
@@ -114,7 +115,7 @@ func getDocumentName(name string) (string, error) {
 }
 
 func getUrlsFromLink(url string) ([]*ExcelUrl, bool) {
-	fmt.Printf("Requesting page %s...\n", url)
+	// fmt.Printf("Requesting page %s...\n", url)
 
 	html_resp, ok := requestPage(url)
 	if !ok {
@@ -124,7 +125,7 @@ func getUrlsFromLink(url string) ([]*ExcelUrl, bool) {
 
 	validNodes := findAllNodesHavingAttribute(html_resp, "a", "class", "attachment-link")
 	if len(validNodes) <= 0 {
-		fmt.Println("Node could not be found")
+		// fmt.Println("Node could not be found")
 		return make([]*ExcelUrl, 0), false
 	}
 
@@ -158,14 +159,14 @@ func getUrls(month string, year string, urlsChannel chan<- *ExcelUrl, wg *sync.W
 		return
 	}
 
-	fmt.Println("Retrying with second URL version")
+	// fmt.Println("Retrying with second URL version")
 	urls, ok = getUrlsFromLink(fmt.Sprintf("https://www.ancpi.ro/statistica-%s-%s/", month[0:3], year))
 	if ok {
 		sendUrls(urls, urlsChannel, month, year)
 		return
 	}
 
-	fmt.Println("Retrying with third URL version")
+	// fmt.Println("Retrying with third URL version")
 	urls, ok = getUrlsFromLink(fmt.Sprintf("https://www.ancpi.ro/statistici-%s-%s/", month, year))
 	if ok {
 		sendUrls(urls, urlsChannel, month, year)
@@ -191,8 +192,15 @@ func findAllExcelUrls() []*ExcelUrl {
 		close(urlsChannel)
 	}()
 
+	totalMonths := len(getYears()) * len(getMonths())
+	bar := progressbar.NewOptions(
+		totalMonths,
+		progressbar.OptionUseANSICodes(true),
+		progressbar.OptionSetDescription("[1/2] Retrieving excel URLS: "),
+	)
 	for url := range urlsChannel {
 		excelUrls = append(excelUrls, url)
+		bar.Add(1)
 	}
 
 	return excelUrls
