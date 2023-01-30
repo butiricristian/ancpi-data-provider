@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"strconv"
 	"strings"
@@ -33,6 +34,11 @@ func (rt RequestType) String() string {
 	return "Unknown"
 }
 
+func (rt RequestType) MarshalJSON() ([]byte, error) {
+	value, err := json.Marshal(rt.String())
+	return value, err
+}
+
 func getRequestType(val string) RequestType {
 	switch val {
 	case "altele":
@@ -52,25 +58,25 @@ type StateData interface {
 }
 
 type VanzariStateData struct {
-	name            string
-	agricol         int
-	neagricol       int
-	constructie     int
-	faraConstructie int
-	total           int
+	Name            string
+	Agricol         int
+	Neagricol       int
+	Constructie     int
+	FaraConstructie int
+	Total           int
 }
 
 type IpoteciStateData struct {
 	VanzariStateData
-	active bool
+	Active bool
 }
 
 type CereriStateData struct {
-	name        string
-	requestType RequestType
-	online      int
-	ghiseu      int
-	total       int
+	Name        string
+	RequestType RequestType
+	Online      int
+	Ghiseu      int
+	Total       int
 }
 
 type ParseResult struct {
@@ -104,35 +110,35 @@ func convertToInt(val string) int {
 
 func createVanzariData(row []string) VanzariStateData {
 	return VanzariStateData{
-		name:            row[1],
-		agricol:         convertToInt(row[2]),
-		neagricol:       convertToInt(row[3]),
-		constructie:     convertToInt(row[4]),
-		faraConstructie: convertToInt(row[5]),
-		total:           convertToInt(row[6]),
+		Name:            row[1],
+		Agricol:         convertToInt(row[2]),
+		Neagricol:       convertToInt(row[3]),
+		Constructie:     convertToInt(row[4]),
+		FaraConstructie: convertToInt(row[5]),
+		Total:           convertToInt(row[6]),
 	}
 }
 
 func createIpoteciData(row []string) (IpoteciStateData, IpoteciStateData) {
 	active := IpoteciStateData{
 		VanzariStateData{
-			name:            row[1],
-			agricol:         convertToInt(row[2]),
-			neagricol:       convertToInt(row[3]),
-			constructie:     convertToInt(row[6]),
-			faraConstructie: convertToInt(row[7]),
-			total:           convertToInt(row[10]),
+			Name:            row[1],
+			Agricol:         convertToInt(row[2]),
+			Neagricol:       convertToInt(row[3]),
+			Constructie:     convertToInt(row[6]),
+			FaraConstructie: convertToInt(row[7]),
+			Total:           convertToInt(row[10]),
 		},
 		true,
 	}
 	inactive := IpoteciStateData{
 		VanzariStateData{
-			name:            row[1],
-			agricol:         convertToInt(row[4]),
-			neagricol:       convertToInt(row[5]),
-			constructie:     convertToInt(row[8]),
-			faraConstructie: convertToInt(row[9]),
-			total:           convertToInt(row[11]),
+			Name:            row[1],
+			Agricol:         convertToInt(row[4]),
+			Neagricol:       convertToInt(row[5]),
+			Constructie:     convertToInt(row[8]),
+			FaraConstructie: convertToInt(row[9]),
+			Total:           convertToInt(row[11]),
 		},
 		false,
 	}
@@ -143,11 +149,11 @@ func createCereriData(row []string) CereriStateData {
 	online := convertToInt(row[3])
 	ghiseu := convertToInt(row[4])
 	return CereriStateData{
-		name:        row[1],
-		requestType: getRequestType(row[2]),
-		online:      online,
-		ghiseu:      ghiseu,
-		total:       online + ghiseu,
+		Name:        row[1],
+		RequestType: getRequestType(row[2]),
+		Online:      online,
+		Ghiseu:      ghiseu,
+		Total:       online + ghiseu,
 	}
 }
 
