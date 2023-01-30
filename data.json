@@ -31202,6 +31202,782 @@
         "Total": 427120
       }
     ],
+    "IPOTECI": [
+      {
+        "Name": "ALBA",
+        "Agricol": 3,
+        "Neagricol": 0,
+        "Constructie": 47,
+        "FaraConstructie": 22,
+        "Total": 52,
+        "Active": true
+      },
+      {
+        "Name": "ALBA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "ARAD",
+        "Agricol": 115,
+        "Neagricol": 1,
+        "Constructie": 221,
+        "FaraConstructie": 173,
+        "Total": 125,
+        "Active": true
+      },
+      {
+        "Name": "ARAD",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 7,
+        "FaraConstructie": 1,
+        "Total": 10,
+        "Active": false
+      },
+      {
+        "Name": "ARGEȘ",
+        "Agricol": 40,
+        "Neagricol": 7,
+        "Constructie": 124,
+        "FaraConstructie": 51,
+        "Total": 123,
+        "Active": true
+      },
+      {
+        "Name": "ARGEȘ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 3,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "BACAU",
+        "Agricol": 42,
+        "Neagricol": 1,
+        "Constructie": 112,
+        "FaraConstructie": 69,
+        "Total": 92,
+        "Active": true
+      },
+      {
+        "Name": "BACAU",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BIHOR",
+        "Agricol": 74,
+        "Neagricol": 0,
+        "Constructie": 199,
+        "FaraConstructie": 81,
+        "Total": 125,
+        "Active": true
+      },
+      {
+        "Name": "BIHOR",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 4,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "Agricol": 1,
+        "Neagricol": 1,
+        "Constructie": 53,
+        "FaraConstructie": 24,
+        "Total": 134,
+        "Active": true
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BOTOȘANI",
+        "Agricol": 35,
+        "Neagricol": 2,
+        "Constructie": 36,
+        "FaraConstructie": 24,
+        "Total": 36,
+        "Active": true
+      },
+      {
+        "Name": "BOTOȘANI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "BRĂILA",
+        "Agricol": 123,
+        "Neagricol": 0,
+        "Constructie": 34,
+        "FaraConstructie": 9,
+        "Total": 40,
+        "Active": true
+      },
+      {
+        "Name": "BRĂILA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BRAȘOV",
+        "Agricol": 13,
+        "Neagricol": 0,
+        "Constructie": 490,
+        "FaraConstructie": 216,
+        "Total": 536,
+        "Active": true
+      },
+      {
+        "Name": "BRAȘOV",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 5,
+        "FaraConstructie": 2,
+        "Total": 4,
+        "Active": false
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1004,
+        "FaraConstructie": 907,
+        "Total": 3019,
+        "Active": true
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 10,
+        "FaraConstructie": 26,
+        "Total": 15,
+        "Active": false
+      },
+      {
+        "Name": "BUZĂU",
+        "Agricol": 430,
+        "Neagricol": 0,
+        "Constructie": 110,
+        "FaraConstructie": 32,
+        "Total": 50,
+        "Active": true
+      },
+      {
+        "Name": "BUZĂU",
+        "Agricol": 18,
+        "Neagricol": 0,
+        "Constructie": 4,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "Agricol": 145,
+        "Neagricol": 0,
+        "Constructie": 57,
+        "FaraConstructie": 5,
+        "Total": 21,
+        "Active": true
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "Agricol": 12,
+        "Neagricol": 0,
+        "Constructie": 21,
+        "FaraConstructie": 7,
+        "Total": 30,
+        "Active": true
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "CLUJ",
+        "Agricol": 5,
+        "Neagricol": 0,
+        "Constructie": 506,
+        "FaraConstructie": 208,
+        "Total": 534,
+        "Active": true
+      },
+      {
+        "Name": "CLUJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 107,
+        "Active": false
+      },
+      {
+        "Name": "CONSTANȚA",
+        "Agricol": 352,
+        "Neagricol": 6,
+        "Constructie": 222,
+        "FaraConstructie": 67,
+        "Total": 258,
+        "Active": true
+      },
+      {
+        "Name": "CONSTANȚA",
+        "Agricol": 3,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "COVASNA",
+        "Agricol": 15,
+        "Neagricol": 0,
+        "Constructie": 25,
+        "FaraConstructie": 12,
+        "Total": 18,
+        "Active": true
+      },
+      {
+        "Name": "COVASNA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "DAMBOVIȚA",
+        "Agricol": 81,
+        "Neagricol": 3,
+        "Constructie": 82,
+        "FaraConstructie": 35,
+        "Total": 34,
+        "Active": true
+      },
+      {
+        "Name": "DAMBOVIȚA",
+        "Agricol": 4,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 1,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "DOLJ",
+        "Agricol": 157,
+        "Neagricol": 1,
+        "Constructie": 110,
+        "FaraConstructie": 21,
+        "Total": 130,
+        "Active": true
+      },
+      {
+        "Name": "DOLJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "GALAȚI",
+        "Agricol": 162,
+        "Neagricol": 4,
+        "Constructie": 84,
+        "FaraConstructie": 15,
+        "Total": 105,
+        "Active": true
+      },
+      {
+        "Name": "GALAȚI",
+        "Agricol": 6,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "GIURGIU",
+        "Agricol": 64,
+        "Neagricol": 0,
+        "Constructie": 32,
+        "FaraConstructie": 18,
+        "Total": 10,
+        "Active": true
+      },
+      {
+        "Name": "GIURGIU",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "GORJ",
+        "Agricol": 3,
+        "Neagricol": 0,
+        "Constructie": 11,
+        "FaraConstructie": 35,
+        "Total": 29,
+        "Active": true
+      },
+      {
+        "Name": "GORJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 3,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "HARGHITA",
+        "Agricol": 5,
+        "Neagricol": 4,
+        "Constructie": 40,
+        "FaraConstructie": 5,
+        "Total": 23,
+        "Active": true
+      },
+      {
+        "Name": "HARGHITA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "HUNEDOARA",
+        "Agricol": 34,
+        "Neagricol": 0,
+        "Constructie": 47,
+        "FaraConstructie": 18,
+        "Total": 80,
+        "Active": true
+      },
+      {
+        "Name": "HUNEDOARA",
+        "Agricol": 6,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "IALOMIȚA",
+        "Agricol": 289,
+        "Neagricol": 0,
+        "Constructie": 46,
+        "FaraConstructie": 7,
+        "Total": 31,
+        "Active": true
+      },
+      {
+        "Name": "IALOMIȚA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "IAȘI",
+        "Agricol": 40,
+        "Neagricol": 18,
+        "Constructie": 215,
+        "FaraConstructie": 265,
+        "Total": 272,
+        "Active": true
+      },
+      {
+        "Name": "IAȘI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "ILFOV",
+        "Agricol": 23,
+        "Neagricol": 9,
+        "Constructie": 424,
+        "FaraConstructie": 460,
+        "Total": 457,
+        "Active": true
+      },
+      {
+        "Name": "ILFOV",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 4,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "Agricol": 6,
+        "Neagricol": 3,
+        "Constructie": 114,
+        "FaraConstructie": 39,
+        "Total": 70,
+        "Active": true
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "Agricol": 14,
+        "Neagricol": 1,
+        "Constructie": 26,
+        "FaraConstructie": 2,
+        "Total": 28,
+        "Active": true
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "MUREȘ",
+        "Agricol": 40,
+        "Neagricol": 5,
+        "Constructie": 103,
+        "FaraConstructie": 30,
+        "Total": 68,
+        "Active": true
+      },
+      {
+        "Name": "MUREȘ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "NEAMȚ",
+        "Agricol": 75,
+        "Neagricol": 1,
+        "Constructie": 79,
+        "FaraConstructie": 28,
+        "Total": 39,
+        "Active": true
+      },
+      {
+        "Name": "NEAMȚ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "OLT",
+        "Agricol": 54,
+        "Neagricol": 6,
+        "Constructie": 72,
+        "FaraConstructie": 16,
+        "Total": 53,
+        "Active": true
+      },
+      {
+        "Name": "OLT",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "PRAHOVA",
+        "Agricol": 90,
+        "Neagricol": 6,
+        "Constructie": 314,
+        "FaraConstructie": 88,
+        "Total": 133,
+        "Active": true
+      },
+      {
+        "Name": "PRAHOVA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 3,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "SĂLAJ",
+        "Agricol": 2,
+        "Neagricol": 0,
+        "Constructie": 21,
+        "FaraConstructie": 9,
+        "Total": 26,
+        "Active": true
+      },
+      {
+        "Name": "SĂLAJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "SATU MARE",
+        "Agricol": 207,
+        "Neagricol": 5,
+        "Constructie": 53,
+        "FaraConstructie": 14,
+        "Total": 21,
+        "Active": true
+      },
+      {
+        "Name": "SATU MARE",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "SIBIU",
+        "Agricol": 9,
+        "Neagricol": 0,
+        "Constructie": 210,
+        "FaraConstructie": 212,
+        "Total": 234,
+        "Active": true
+      },
+      {
+        "Name": "SIBIU",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 3,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "SUCEAVA",
+        "Agricol": 41,
+        "Neagricol": 14,
+        "Constructie": 120,
+        "FaraConstructie": 65,
+        "Total": 68,
+        "Active": true
+      },
+      {
+        "Name": "SUCEAVA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 5,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "TELEORMAN",
+        "Agricol": 68,
+        "Neagricol": 0,
+        "Constructie": 28,
+        "FaraConstructie": 1,
+        "Total": 19,
+        "Active": true
+      },
+      {
+        "Name": "TELEORMAN",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "TIMIȘ",
+        "Agricol": 394,
+        "Neagricol": 7,
+        "Constructie": 358,
+        "FaraConstructie": 47,
+        "Total": 374,
+        "Active": true
+      },
+      {
+        "Name": "TIMIȘ",
+        "Agricol": 5,
+        "Neagricol": 0,
+        "Constructie": 3,
+        "FaraConstructie": 7,
+        "Total": 7,
+        "Active": false
+      },
+      {
+        "Name": "TULCEA",
+        "Agricol": 306,
+        "Neagricol": 35,
+        "Constructie": 13,
+        "FaraConstructie": 7,
+        "Total": 30,
+        "Active": true
+      },
+      {
+        "Name": "TULCEA",
+        "Agricol": 6,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "VÂLCEA",
+        "Agricol": 3,
+        "Neagricol": 2,
+        "Constructie": 67,
+        "FaraConstructie": 76,
+        "Total": 53,
+        "Active": true
+      },
+      {
+        "Name": "VÂLCEA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "VASLUI",
+        "Agricol": 56,
+        "Neagricol": 0,
+        "Constructie": 62,
+        "FaraConstructie": 10,
+        "Total": 25,
+        "Active": true
+      },
+      {
+        "Name": "VASLUI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "VRANCEA",
+        "Agricol": 64,
+        "Neagricol": 1,
+        "Constructie": 38,
+        "FaraConstructie": 20,
+        "Total": 27,
+        "Active": true
+      },
+      {
+        "Name": "VRANCEA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "TOTAL",
+        "Agricol": 3692,
+        "Neagricol": 143,
+        "Constructie": 6030,
+        "FaraConstructie": 3450,
+        "Total": 7632,
+        "Active": true
+      },
+      {
+        "Name": "TOTAL",
+        "Agricol": 52,
+        "Neagricol": 0,
+        "Constructie": 54,
+        "FaraConstructie": 70,
+        "Total": 155,
+        "Active": false
+      }
+    ],
     "VANZARI": [
       {
         "Name": "ALBA",
@@ -125095,6 +125871,782 @@
         "Total": 582988
       }
     ],
+    "IPOTECI": [
+      {
+        "Name": "ALBA",
+        "Agricol": 137,
+        "Neagricol": 14,
+        "Constructie": 248,
+        "FaraConstructie": 102,
+        "Total": 65,
+        "Active": true
+      },
+      {
+        "Name": "ALBA",
+        "Agricol": 2,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 3,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "ARAD",
+        "Agricol": 87,
+        "Neagricol": 5,
+        "Constructie": 128,
+        "FaraConstructie": 30,
+        "Total": 136,
+        "Active": true
+      },
+      {
+        "Name": "ARAD",
+        "Agricol": 8,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 6,
+        "Active": false
+      },
+      {
+        "Name": "ARGEȘ",
+        "Agricol": 29,
+        "Neagricol": 11,
+        "Constructie": 102,
+        "FaraConstructie": 61,
+        "Total": 191,
+        "Active": true
+      },
+      {
+        "Name": "ARGEȘ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 3,
+        "FaraConstructie": 4,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BACAU",
+        "Agricol": 10,
+        "Neagricol": 0,
+        "Constructie": 89,
+        "FaraConstructie": 43,
+        "Total": 95,
+        "Active": true
+      },
+      {
+        "Name": "BACAU",
+        "Agricol": 0,
+        "Neagricol": 3,
+        "Constructie": 10,
+        "FaraConstructie": 0,
+        "Total": 5,
+        "Active": false
+      },
+      {
+        "Name": "BIHOR",
+        "Agricol": 34,
+        "Neagricol": 1,
+        "Constructie": 164,
+        "FaraConstructie": 145,
+        "Total": 118,
+        "Active": true
+      },
+      {
+        "Name": "BIHOR",
+        "Agricol": 2,
+        "Neagricol": 0,
+        "Constructie": 6,
+        "FaraConstructie": 40,
+        "Total": 8,
+        "Active": false
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "Agricol": 4,
+        "Neagricol": 1,
+        "Constructie": 79,
+        "FaraConstructie": 21,
+        "Total": 77,
+        "Active": true
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BOTOȘANI",
+        "Agricol": 64,
+        "Neagricol": 5,
+        "Constructie": 76,
+        "FaraConstructie": 31,
+        "Total": 63,
+        "Active": true
+      },
+      {
+        "Name": "BOTOȘANI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "BRĂILA",
+        "Agricol": 182,
+        "Neagricol": 0,
+        "Constructie": 30,
+        "FaraConstructie": 10,
+        "Total": 42,
+        "Active": true
+      },
+      {
+        "Name": "BRĂILA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "BRAȘOV",
+        "Agricol": 9,
+        "Neagricol": 2,
+        "Constructie": 317,
+        "FaraConstructie": 307,
+        "Total": 403,
+        "Active": true
+      },
+      {
+        "Name": "BRAȘOV",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 6,
+        "FaraConstructie": 2,
+        "Total": 7,
+        "Active": false
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 994,
+        "FaraConstructie": 902,
+        "Total": 2915,
+        "Active": true
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 18,
+        "FaraConstructie": 7,
+        "Total": 67,
+        "Active": false
+      },
+      {
+        "Name": "BUZĂU",
+        "Agricol": 72,
+        "Neagricol": 4,
+        "Constructie": 128,
+        "FaraConstructie": 21,
+        "Total": 72,
+        "Active": true
+      },
+      {
+        "Name": "BUZĂU",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 1,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "Agricol": 338,
+        "Neagricol": 0,
+        "Constructie": 42,
+        "FaraConstructie": 3,
+        "Total": 16,
+        "Active": true
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "Agricol": 51,
+        "Neagricol": 1,
+        "Constructie": 23,
+        "FaraConstructie": 7,
+        "Total": 48,
+        "Active": true
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 5,
+        "FaraConstructie": 0,
+        "Total": 6,
+        "Active": false
+      },
+      {
+        "Name": "CLUJ",
+        "Agricol": 5,
+        "Neagricol": 0,
+        "Constructie": 587,
+        "FaraConstructie": 284,
+        "Total": 552,
+        "Active": true
+      },
+      {
+        "Name": "CLUJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 2,
+        "Total": 3,
+        "Active": false
+      },
+      {
+        "Name": "CONSTANȚA",
+        "Agricol": 298,
+        "Neagricol": 10,
+        "Constructie": 206,
+        "FaraConstructie": 62,
+        "Total": 2421,
+        "Active": true
+      },
+      {
+        "Name": "CONSTANȚA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 1,
+        "Total": 4,
+        "Active": false
+      },
+      {
+        "Name": "COVASNA",
+        "Agricol": 9,
+        "Neagricol": 3,
+        "Constructie": 26,
+        "FaraConstructie": 8,
+        "Total": 23,
+        "Active": true
+      },
+      {
+        "Name": "COVASNA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "DAMBOVIȚA",
+        "Agricol": 30,
+        "Neagricol": 1,
+        "Constructie": 86,
+        "FaraConstructie": 42,
+        "Total": 34,
+        "Active": true
+      },
+      {
+        "Name": "DAMBOVIȚA",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "DOLJ",
+        "Agricol": 88,
+        "Neagricol": 1,
+        "Constructie": 123,
+        "FaraConstructie": 70,
+        "Total": 139,
+        "Active": true
+      },
+      {
+        "Name": "DOLJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 4,
+        "FaraConstructie": 1,
+        "Total": 3,
+        "Active": false
+      },
+      {
+        "Name": "GALAȚI",
+        "Agricol": 149,
+        "Neagricol": 1,
+        "Constructie": 70,
+        "FaraConstructie": 28,
+        "Total": 143,
+        "Active": true
+      },
+      {
+        "Name": "GALAȚI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 2,
+        "Total": 3,
+        "Active": false
+      },
+      {
+        "Name": "GIURGIU",
+        "Agricol": 75,
+        "Neagricol": 1,
+        "Constructie": 42,
+        "FaraConstructie": 28,
+        "Total": 7,
+        "Active": true
+      },
+      {
+        "Name": "GIURGIU",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 2,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "GORJ",
+        "Agricol": 12,
+        "Neagricol": 6,
+        "Constructie": 25,
+        "FaraConstructie": 10,
+        "Total": 33,
+        "Active": true
+      },
+      {
+        "Name": "GORJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "HARGHITA",
+        "Agricol": 2,
+        "Neagricol": 0,
+        "Constructie": 27,
+        "FaraConstructie": 4,
+        "Total": 16,
+        "Active": true
+      },
+      {
+        "Name": "HARGHITA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "HUNEDOARA",
+        "Agricol": 29,
+        "Neagricol": 1,
+        "Constructie": 42,
+        "FaraConstructie": 13,
+        "Total": 108,
+        "Active": true
+      },
+      {
+        "Name": "HUNEDOARA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 3,
+        "Active": false
+      },
+      {
+        "Name": "IALOMIȚA",
+        "Agricol": 169,
+        "Neagricol": 2,
+        "Constructie": 38,
+        "FaraConstructie": 13,
+        "Total": 18,
+        "Active": true
+      },
+      {
+        "Name": "IALOMIȚA",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 2,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "IAȘI",
+        "Agricol": 90,
+        "Neagricol": 9,
+        "Constructie": 366,
+        "FaraConstructie": 474,
+        "Total": 338,
+        "Active": true
+      },
+      {
+        "Name": "IAȘI",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 6,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "ILFOV",
+        "Agricol": 30,
+        "Neagricol": 8,
+        "Constructie": 662,
+        "FaraConstructie": 742,
+        "Total": 464,
+        "Active": true
+      },
+      {
+        "Name": "ILFOV",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 3,
+        "FaraConstructie": 3,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "Agricol": 4,
+        "Neagricol": 2,
+        "Constructie": 132,
+        "FaraConstructie": 46,
+        "Total": 62,
+        "Active": true
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "Agricol": 68,
+        "Neagricol": 7,
+        "Constructie": 63,
+        "FaraConstructie": 25,
+        "Total": 50,
+        "Active": true
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 15,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "MUREȘ",
+        "Agricol": 15,
+        "Neagricol": 0,
+        "Constructie": 124,
+        "FaraConstructie": 32,
+        "Total": 107,
+        "Active": true
+      },
+      {
+        "Name": "MUREȘ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "NEAMȚ",
+        "Agricol": 65,
+        "Neagricol": 5,
+        "Constructie": 99,
+        "FaraConstructie": 27,
+        "Total": 71,
+        "Active": true
+      },
+      {
+        "Name": "NEAMȚ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 1,
+        "Total": 3,
+        "Active": false
+      },
+      {
+        "Name": "OLT",
+        "Agricol": 136,
+        "Neagricol": 6,
+        "Constructie": 161,
+        "FaraConstructie": 11,
+        "Total": 55,
+        "Active": true
+      },
+      {
+        "Name": "OLT",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "PRAHOVA",
+        "Agricol": 107,
+        "Neagricol": 4,
+        "Constructie": 313,
+        "FaraConstructie": 51,
+        "Total": 165,
+        "Active": true
+      },
+      {
+        "Name": "PRAHOVA",
+        "Agricol": 12,
+        "Neagricol": 0,
+        "Constructie": 16,
+        "FaraConstructie": 1,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "SĂLAJ",
+        "Agricol": 1,
+        "Neagricol": 0,
+        "Constructie": 24,
+        "FaraConstructie": 3,
+        "Total": 30,
+        "Active": true
+      },
+      {
+        "Name": "SĂLAJ",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "SATU MARE",
+        "Agricol": 2,
+        "Neagricol": 4,
+        "Constructie": 76,
+        "FaraConstructie": 14,
+        "Total": 64,
+        "Active": true
+      },
+      {
+        "Name": "SATU MARE",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "SIBIU",
+        "Agricol": 10,
+        "Neagricol": 0,
+        "Constructie": 249,
+        "FaraConstructie": 107,
+        "Total": 243,
+        "Active": true
+      },
+      {
+        "Name": "SIBIU",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 5,
+        "FaraConstructie": 1,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "SUCEAVA",
+        "Agricol": 31,
+        "Neagricol": 1,
+        "Constructie": 152,
+        "FaraConstructie": 56,
+        "Total": 111,
+        "Active": true
+      },
+      {
+        "Name": "SUCEAVA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 6,
+        "FaraConstructie": 5,
+        "Total": 2,
+        "Active": false
+      },
+      {
+        "Name": "TELEORMAN",
+        "Agricol": 98,
+        "Neagricol": 0,
+        "Constructie": 31,
+        "FaraConstructie": 5,
+        "Total": 18,
+        "Active": true
+      },
+      {
+        "Name": "TELEORMAN",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "TIMIȘ",
+        "Agricol": 451,
+        "Neagricol": 2,
+        "Constructie": 343,
+        "FaraConstructie": 149,
+        "Total": 385,
+        "Active": true
+      },
+      {
+        "Name": "TIMIȘ",
+        "Agricol": 20,
+        "Neagricol": 0,
+        "Constructie": 13,
+        "FaraConstructie": 7,
+        "Total": 20,
+        "Active": false
+      },
+      {
+        "Name": "TULCEA",
+        "Agricol": 95,
+        "Neagricol": 1,
+        "Constructie": 28,
+        "FaraConstructie": 26,
+        "Total": 36,
+        "Active": true
+      },
+      {
+        "Name": "TULCEA",
+        "Agricol": 1,
+        "Neagricol": 1,
+        "Constructie": 1,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "VÂLCEA",
+        "Agricol": 15,
+        "Neagricol": 5,
+        "Constructie": 80,
+        "FaraConstructie": 35,
+        "Total": 80,
+        "Active": true
+      },
+      {
+        "Name": "VÂLCEA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 1,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "VASLUI",
+        "Agricol": 24,
+        "Neagricol": 1,
+        "Constructie": 83,
+        "FaraConstructie": 8,
+        "Total": 43,
+        "Active": true
+      },
+      {
+        "Name": "VASLUI",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 1,
+        "Active": false
+      },
+      {
+        "Name": "VRANCEA",
+        "Agricol": 112,
+        "Neagricol": 2,
+        "Constructie": 45,
+        "FaraConstructie": 31,
+        "Total": 32,
+        "Active": true
+      },
+      {
+        "Name": "VRANCEA",
+        "Agricol": 0,
+        "Neagricol": 0,
+        "Constructie": 0,
+        "FaraConstructie": 0,
+        "Total": 0,
+        "Active": false
+      },
+      {
+        "Name": "TOTAL",
+        "Agricol": 3237,
+        "Neagricol": 127,
+        "Constructie": 6723,
+        "FaraConstructie": 4087,
+        "Total": 10089,
+        "Active": true
+      },
+      {
+        "Name": "TOTAL",
+        "Agricol": 49,
+        "Neagricol": 4,
+        "Constructie": 132,
+        "FaraConstructie": 97,
+        "Total": 159,
+        "Active": false
+      }
+    ],
     "VANZARI": [
       {
         "Name": "ALBA",
@@ -139297,6 +140849,1191 @@
     ]
   },
   "octombrie, 2018": {
+    "CERERI": [
+      {
+        "Name": "ALBA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "ALBA",
+        "RequestType": "Informare",
+        "Online": 2047,
+        "Ghiseu": 3370,
+        "Total": 5417
+      },
+      {
+        "Name": "ALBA",
+        "RequestType": "Inscriere",
+        "Online": 1480,
+        "Ghiseu": 1013,
+        "Total": 2493
+      },
+      {
+        "Name": "ALBA",
+        "RequestType": "Receptie",
+        "Online": 955,
+        "Ghiseu": 55,
+        "Total": 1010
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Informare",
+        "Online": 6147,
+        "Ghiseu": 6037,
+        "Total": 12184
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Inscriere",
+        "Online": 2801,
+        "Ghiseu": 3499,
+        "Total": 6300
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Receptie",
+        "Online": 1648,
+        "Ghiseu": 144,
+        "Total": 1792
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Informare",
+        "Online": 3481,
+        "Ghiseu": 2827,
+        "Total": 6308
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Inscriere",
+        "Online": 1538,
+        "Ghiseu": 2044,
+        "Total": 3582
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Receptie",
+        "Online": 2022,
+        "Ghiseu": 204,
+        "Total": 2226
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Informare",
+        "Online": 2460,
+        "Ghiseu": 5652,
+        "Total": 8112
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Inscriere",
+        "Online": 1525,
+        "Ghiseu": 1948,
+        "Total": 3473
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Receptie",
+        "Online": 2201,
+        "Ghiseu": 135,
+        "Total": 2336
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Informare",
+        "Online": 6698,
+        "Ghiseu": 5930,
+        "Total": 12628
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Inscriere",
+        "Online": 3914,
+        "Ghiseu": 1467,
+        "Total": 5381
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Receptie",
+        "Online": 2607,
+        "Ghiseu": 445,
+        "Total": 3052
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Informare",
+        "Online": 937,
+        "Ghiseu": 5546,
+        "Total": 6483
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Inscriere",
+        "Online": 392,
+        "Ghiseu": 1211,
+        "Total": 1603
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Receptie",
+        "Online": 930,
+        "Ghiseu": 109,
+        "Total": 1039
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Informare",
+        "Online": 2470,
+        "Ghiseu": 3920,
+        "Total": 6390
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Inscriere",
+        "Online": 1878,
+        "Ghiseu": 937,
+        "Total": 2815
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Receptie",
+        "Online": 2099,
+        "Ghiseu": 40,
+        "Total": 2139
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Informare",
+        "Online": 3752,
+        "Ghiseu": 5155,
+        "Total": 8907
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Inscriere",
+        "Online": 3419,
+        "Ghiseu": 563,
+        "Total": 3982
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Receptie",
+        "Online": 1184,
+        "Ghiseu": 59,
+        "Total": 1243
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Informare",
+        "Online": 7426,
+        "Ghiseu": 5834,
+        "Total": 13260
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Inscriere",
+        "Online": 4581,
+        "Ghiseu": 1501,
+        "Total": 6082
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Receptie",
+        "Online": 1507,
+        "Ghiseu": 592,
+        "Total": 2099
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Informare",
+        "Online": 19811,
+        "Ghiseu": 6581,
+        "Total": 26392
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Inscriere",
+        "Online": 13752,
+        "Ghiseu": 5012,
+        "Total": 18764
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Receptie",
+        "Online": 2725,
+        "Ghiseu": 61,
+        "Total": 2786
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Informare",
+        "Online": 3442,
+        "Ghiseu": 1437,
+        "Total": 4879
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Inscriere",
+        "Online": 2433,
+        "Ghiseu": 693,
+        "Total": 3126
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Receptie",
+        "Online": 2171,
+        "Ghiseu": 32,
+        "Total": 2203
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Informare",
+        "Online": 2951,
+        "Ghiseu": 2782,
+        "Total": 5733
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Inscriere",
+        "Online": 2250,
+        "Ghiseu": 885,
+        "Total": 3135
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Receptie",
+        "Online": 1516,
+        "Ghiseu": 65,
+        "Total": 1581
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Informare",
+        "Online": 2194,
+        "Ghiseu": 4832,
+        "Total": 7026
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Inscriere",
+        "Online": 1002,
+        "Ghiseu": 1198,
+        "Total": 2200
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Receptie",
+        "Online": 925,
+        "Ghiseu": 129,
+        "Total": 1054
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Informare",
+        "Online": 8087,
+        "Ghiseu": 7464,
+        "Total": 15551
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Inscriere",
+        "Online": 5790,
+        "Ghiseu": 1835,
+        "Total": 7625
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Receptie",
+        "Online": 3384,
+        "Ghiseu": 328,
+        "Total": 3712
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Informare",
+        "Online": 9747,
+        "Ghiseu": 4221,
+        "Total": 13968
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Inscriere",
+        "Online": 4706,
+        "Ghiseu": 1498,
+        "Total": 6204
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Receptie",
+        "Online": 2830,
+        "Ghiseu": 21,
+        "Total": 2851
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Informare",
+        "Online": 1014,
+        "Ghiseu": 2685,
+        "Total": 3699
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Inscriere",
+        "Online": 829,
+        "Ghiseu": 944,
+        "Total": 1773
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Receptie",
+        "Online": 621,
+        "Ghiseu": 21,
+        "Total": 642
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Informare",
+        "Online": 2875,
+        "Ghiseu": 2156,
+        "Total": 5031
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Inscriere",
+        "Online": 1701,
+        "Ghiseu": 1020,
+        "Total": 2721
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Receptie",
+        "Online": 1616,
+        "Ghiseu": 115,
+        "Total": 1731
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Informare",
+        "Online": 6477,
+        "Ghiseu": 2560,
+        "Total": 9037
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Inscriere",
+        "Online": 3996,
+        "Ghiseu": 982,
+        "Total": 4978
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Receptie",
+        "Online": 2603,
+        "Ghiseu": 69,
+        "Total": 2672
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Informare",
+        "Online": 4145,
+        "Ghiseu": 2746,
+        "Total": 6891
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Inscriere",
+        "Online": 3350,
+        "Ghiseu": 1134,
+        "Total": 4484
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Receptie",
+        "Online": 1816,
+        "Ghiseu": 95,
+        "Total": 1911
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Informare",
+        "Online": 2102,
+        "Ghiseu": 1311,
+        "Total": 3413
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Inscriere",
+        "Online": 1159,
+        "Ghiseu": 862,
+        "Total": 2021
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Receptie",
+        "Online": 1151,
+        "Ghiseu": 35,
+        "Total": 1186
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Informare",
+        "Online": 1804,
+        "Ghiseu": 1579,
+        "Total": 3383
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Inscriere",
+        "Online": 1231,
+        "Ghiseu": 428,
+        "Total": 1659
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Receptie",
+        "Online": 1250,
+        "Ghiseu": 115,
+        "Total": 1365
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Informare",
+        "Online": 1126,
+        "Ghiseu": 4442,
+        "Total": 5568
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Inscriere",
+        "Online": 726,
+        "Ghiseu": 1050,
+        "Total": 1776
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Receptie",
+        "Online": 1003,
+        "Ghiseu": 99,
+        "Total": 1102
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Informare",
+        "Online": 2320,
+        "Ghiseu": 12959,
+        "Total": 15279
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Inscriere",
+        "Online": 1793,
+        "Ghiseu": 841,
+        "Total": 2634
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Receptie",
+        "Online": 1032,
+        "Ghiseu": 55,
+        "Total": 1087
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Informare",
+        "Online": 2554,
+        "Ghiseu": 2829,
+        "Total": 5383
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Inscriere",
+        "Online": 1315,
+        "Ghiseu": 960,
+        "Total": 2275
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Receptie",
+        "Online": 1360,
+        "Ghiseu": 35,
+        "Total": 1395
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Informare",
+        "Online": 6338,
+        "Ghiseu": 7768,
+        "Total": 14106
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Inscriere",
+        "Online": 4919,
+        "Ghiseu": 1554,
+        "Total": 6473
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Receptie",
+        "Online": 2510,
+        "Ghiseu": 41,
+        "Total": 2551
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Informare",
+        "Online": 13689,
+        "Ghiseu": 6499,
+        "Total": 20188
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Inscriere",
+        "Online": 6389,
+        "Ghiseu": 4349,
+        "Total": 10738
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Receptie",
+        "Online": 2510,
+        "Ghiseu": 244,
+        "Total": 2754
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Informare",
+        "Online": 2306,
+        "Ghiseu": 4596,
+        "Total": 6902
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Inscriere",
+        "Online": 1534,
+        "Ghiseu": 794,
+        "Total": 2328
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Receptie",
+        "Online": 1625,
+        "Ghiseu": 149,
+        "Total": 1774
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Informare",
+        "Online": 1194,
+        "Ghiseu": 2330,
+        "Total": 3524
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Inscriere",
+        "Online": 845,
+        "Ghiseu": 653,
+        "Total": 1498
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Receptie",
+        "Online": 1038,
+        "Ghiseu": 35,
+        "Total": 1073
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Informare",
+        "Online": 2493,
+        "Ghiseu": 6353,
+        "Total": 8846
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Inscriere",
+        "Online": 1456,
+        "Ghiseu": 1730,
+        "Total": 3186
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Receptie",
+        "Online": 1425,
+        "Ghiseu": 388,
+        "Total": 1813
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Informare",
+        "Online": 2475,
+        "Ghiseu": 9350,
+        "Total": 11825
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Inscriere",
+        "Online": 1687,
+        "Ghiseu": 839,
+        "Total": 2526
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Receptie",
+        "Online": 1787,
+        "Ghiseu": 77,
+        "Total": 1864
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Informare",
+        "Online": 2458,
+        "Ghiseu": 1370,
+        "Total": 3828
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Inscriere",
+        "Online": 1560,
+        "Ghiseu": 634,
+        "Total": 2194
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Receptie",
+        "Online": 1264,
+        "Ghiseu": 91,
+        "Total": 1355
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Informare",
+        "Online": 5108,
+        "Ghiseu": 3804,
+        "Total": 8912
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Inscriere",
+        "Online": 1418,
+        "Ghiseu": 2583,
+        "Total": 4001
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Receptie",
+        "Online": 2063,
+        "Ghiseu": 218,
+        "Total": 2281
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Informare",
+        "Online": 1145,
+        "Ghiseu": 3167,
+        "Total": 4312
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Inscriere",
+        "Online": 720,
+        "Ghiseu": 555,
+        "Total": 1275
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Receptie",
+        "Online": 646,
+        "Ghiseu": 32,
+        "Total": 678
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Informare",
+        "Online": 2365,
+        "Ghiseu": 4117,
+        "Total": 6482
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Inscriere",
+        "Online": 2190,
+        "Ghiseu": 615,
+        "Total": 2805
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Receptie",
+        "Online": 1472,
+        "Ghiseu": 44,
+        "Total": 1516
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Informare",
+        "Online": 4268,
+        "Ghiseu": 6336,
+        "Total": 10604
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Inscriere",
+        "Online": 4071,
+        "Ghiseu": 864,
+        "Total": 4935
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Receptie",
+        "Online": 1385,
+        "Ghiseu": 174,
+        "Total": 1559
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Informare",
+        "Online": 3481,
+        "Ghiseu": 5981,
+        "Total": 9462
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Inscriere",
+        "Online": 2942,
+        "Ghiseu": 914,
+        "Total": 3856
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Receptie",
+        "Online": 3021,
+        "Ghiseu": 311,
+        "Total": 3332
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Informare",
+        "Online": 770,
+        "Ghiseu": 3274,
+        "Total": 4044
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Inscriere",
+        "Online": 367,
+        "Ghiseu": 2373,
+        "Total": 2740
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Receptie",
+        "Online": 2033,
+        "Ghiseu": 54,
+        "Total": 2087
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Informare",
+        "Online": 11427,
+        "Ghiseu": 7794,
+        "Total": 19221
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Inscriere",
+        "Online": 4592,
+        "Ghiseu": 3787,
+        "Total": 8379
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Receptie",
+        "Online": 3556,
+        "Ghiseu": 261,
+        "Total": 3817
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Informare",
+        "Online": 2941,
+        "Ghiseu": 1209,
+        "Total": 4150
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Inscriere",
+        "Online": 2043,
+        "Ghiseu": 454,
+        "Total": 2497
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Receptie",
+        "Online": 1235,
+        "Ghiseu": 24,
+        "Total": 1259
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Informare",
+        "Online": 2081,
+        "Ghiseu": 1953,
+        "Total": 4034
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Inscriere",
+        "Online": 1101,
+        "Ghiseu": 673,
+        "Total": 1774
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Receptie",
+        "Online": 1324,
+        "Ghiseu": 119,
+        "Total": 1443
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Informare",
+        "Online": 2409,
+        "Ghiseu": 4156,
+        "Total": 6565
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Inscriere",
+        "Online": 912,
+        "Ghiseu": 1226,
+        "Total": 2138
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Receptie",
+        "Online": 1486,
+        "Ghiseu": 79,
+        "Total": 1565
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Informare",
+        "Online": 2590,
+        "Ghiseu": 7237,
+        "Total": 9827
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Inscriere",
+        "Online": 1398,
+        "Ghiseu": 1244,
+        "Total": 2642
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Receptie",
+        "Online": 1655,
+        "Ghiseu": 57,
+        "Total": 1712
+      },
+      {
+        "Name": "TOTAL",
+        "RequestType": "Unknown",
+        "Online": 356502,
+        "Ghiseu": 256971,
+        "Total": 613473
+      }
+    ],
     "IPOTECI": [
       {
         "Name": "ALBA",
@@ -147348,6 +150085,1191 @@
     ]
   },
   "octombrie, 2022": {
+    "CERERI": [
+      {
+        "Name": "ALBA",
+        "RequestType": "Altele",
+        "Online": 139,
+        "Ghiseu": 1,
+        "Total": 140
+      },
+      {
+        "Name": "ALBA",
+        "RequestType": "Informare",
+        "Online": 2845,
+        "Ghiseu": 2228,
+        "Total": 5073
+      },
+      {
+        "Name": "ALBA",
+        "RequestType": "Inscriere",
+        "Online": 2747,
+        "Ghiseu": 1104,
+        "Total": 3851
+      },
+      {
+        "Name": "ALBA",
+        "RequestType": "Receptie",
+        "Online": 1147,
+        "Ghiseu": 117,
+        "Total": 1264
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Altele",
+        "Online": 96,
+        "Ghiseu": 3,
+        "Total": 99
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Informare",
+        "Online": 4771,
+        "Ghiseu": 4853,
+        "Total": 9624
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Inscriere",
+        "Online": 3633,
+        "Ghiseu": 2008,
+        "Total": 5641
+      },
+      {
+        "Name": "ARAD",
+        "RequestType": "Receptie",
+        "Online": 1173,
+        "Ghiseu": 800,
+        "Total": 1973
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Informare",
+        "Online": 4878,
+        "Ghiseu": 1913,
+        "Total": 6791
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Inscriere",
+        "Online": 2568,
+        "Ghiseu": 1170,
+        "Total": 3738
+      },
+      {
+        "Name": "ARGEȘ",
+        "RequestType": "Receptie",
+        "Online": 2330,
+        "Ghiseu": 107,
+        "Total": 2437
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Informare",
+        "Online": 3693,
+        "Ghiseu": 2886,
+        "Total": 6579
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Inscriere",
+        "Online": 2545,
+        "Ghiseu": 799,
+        "Total": 3344
+      },
+      {
+        "Name": "BACĂU",
+        "RequestType": "Receptie",
+        "Online": 2187,
+        "Ghiseu": 69,
+        "Total": 2256
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Altele",
+        "Online": 67,
+        "Ghiseu": 0,
+        "Total": 67
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Informare",
+        "Online": 6519,
+        "Ghiseu": 3424,
+        "Total": 9943
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Inscriere",
+        "Online": 5135,
+        "Ghiseu": 637,
+        "Total": 5772
+      },
+      {
+        "Name": "BIHOR",
+        "RequestType": "Receptie",
+        "Online": 2284,
+        "Ghiseu": 149,
+        "Total": 2433
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Altele",
+        "Online": 53,
+        "Ghiseu": 0,
+        "Total": 53
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Informare",
+        "Online": 1779,
+        "Ghiseu": 2616,
+        "Total": 4395
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Inscriere",
+        "Online": 1235,
+        "Ghiseu": 713,
+        "Total": 1948
+      },
+      {
+        "Name": "BISTRIȚA NĂSĂUD",
+        "RequestType": "Receptie",
+        "Online": 953,
+        "Ghiseu": 52,
+        "Total": 1005
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Informare",
+        "Online": 2221,
+        "Ghiseu": 3638,
+        "Total": 5859
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Inscriere",
+        "Online": 1839,
+        "Ghiseu": 482,
+        "Total": 2321
+      },
+      {
+        "Name": "BOTOȘANI",
+        "RequestType": "Receptie",
+        "Online": 2193,
+        "Ghiseu": 59,
+        "Total": 2252
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Informare",
+        "Online": 3714,
+        "Ghiseu": 4557,
+        "Total": 8271
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Inscriere",
+        "Online": 3373,
+        "Ghiseu": 532,
+        "Total": 3905
+      },
+      {
+        "Name": "BRĂILA",
+        "RequestType": "Receptie",
+        "Online": 868,
+        "Ghiseu": 59,
+        "Total": 927
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Altele",
+        "Online": 99,
+        "Ghiseu": 0,
+        "Total": 99
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Informare",
+        "Online": 8670,
+        "Ghiseu": 2657,
+        "Total": 11327
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Inscriere",
+        "Online": 5999,
+        "Ghiseu": 960,
+        "Total": 6959
+      },
+      {
+        "Name": "BRAȘOV",
+        "RequestType": "Receptie",
+        "Online": 2033,
+        "Ghiseu": 1429,
+        "Total": 3462
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Informare",
+        "Online": 21844,
+        "Ghiseu": 4636,
+        "Total": 26480
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Inscriere",
+        "Online": 21146,
+        "Ghiseu": 1850,
+        "Total": 22996
+      },
+      {
+        "Name": "BUCUREȘTI",
+        "RequestType": "Receptie",
+        "Online": 2570,
+        "Ghiseu": 10,
+        "Total": 2580
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Informare",
+        "Online": 3999,
+        "Ghiseu": 2524,
+        "Total": 6523
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Inscriere",
+        "Online": 3533,
+        "Ghiseu": 740,
+        "Total": 4273
+      },
+      {
+        "Name": "BUZĂU",
+        "RequestType": "Receptie",
+        "Online": 2437,
+        "Ghiseu": 30,
+        "Total": 2467
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Informare",
+        "Online": 2455,
+        "Ghiseu": 1957,
+        "Total": 4412
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Inscriere",
+        "Online": 2083,
+        "Ghiseu": 684,
+        "Total": 2767
+      },
+      {
+        "Name": "CĂLĂRAȘI",
+        "RequestType": "Receptie",
+        "Online": 840,
+        "Ghiseu": 99,
+        "Total": 939
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Altele",
+        "Online": 28,
+        "Ghiseu": 0,
+        "Total": 28
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Informare",
+        "Online": 2290,
+        "Ghiseu": 1904,
+        "Total": 4194
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Inscriere",
+        "Online": 1666,
+        "Ghiseu": 421,
+        "Total": 2087
+      },
+      {
+        "Name": "CARAȘ SEVERIN",
+        "RequestType": "Receptie",
+        "Online": 1115,
+        "Ghiseu": 102,
+        "Total": 1217
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Altele",
+        "Online": 101,
+        "Ghiseu": 0,
+        "Total": 101
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Informare",
+        "Online": 9385,
+        "Ghiseu": 4154,
+        "Total": 13539
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Inscriere",
+        "Online": 6513,
+        "Ghiseu": 1217,
+        "Total": 7730
+      },
+      {
+        "Name": "CLUJ",
+        "RequestType": "Receptie",
+        "Online": 3366,
+        "Ghiseu": 309,
+        "Total": 3675
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Informare",
+        "Online": 9276,
+        "Ghiseu": 1763,
+        "Total": 11039
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Inscriere",
+        "Online": 6048,
+        "Ghiseu": 985,
+        "Total": 7033
+      },
+      {
+        "Name": "CONSTANȚA",
+        "RequestType": "Receptie",
+        "Online": 2490,
+        "Ghiseu": 43,
+        "Total": 2533
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Altele",
+        "Online": 58,
+        "Ghiseu": 0,
+        "Total": 58
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Informare",
+        "Online": 1136,
+        "Ghiseu": 1553,
+        "Total": 2689
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Inscriere",
+        "Online": 938,
+        "Ghiseu": 370,
+        "Total": 1308
+      },
+      {
+        "Name": "COVASNA",
+        "RequestType": "Receptie",
+        "Online": 506,
+        "Ghiseu": 32,
+        "Total": 538
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Informare",
+        "Online": 3825,
+        "Ghiseu": 1959,
+        "Total": 5784
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Inscriere",
+        "Online": 2645,
+        "Ghiseu": 613,
+        "Total": 3258
+      },
+      {
+        "Name": "DÂMBOVIȚA",
+        "RequestType": "Receptie",
+        "Online": 1799,
+        "Ghiseu": 112,
+        "Total": 1911
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Informare",
+        "Online": 6787,
+        "Ghiseu": 1241,
+        "Total": 8028
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Inscriere",
+        "Online": 5548,
+        "Ghiseu": 996,
+        "Total": 6544
+      },
+      {
+        "Name": "DOLJ",
+        "RequestType": "Receptie",
+        "Online": 2742,
+        "Ghiseu": 127,
+        "Total": 2869
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Informare",
+        "Online": 4129,
+        "Ghiseu": 1236,
+        "Total": 5365
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Inscriere",
+        "Online": 4108,
+        "Ghiseu": 622,
+        "Total": 4730
+      },
+      {
+        "Name": "GALAȚI",
+        "RequestType": "Receptie",
+        "Online": 1637,
+        "Ghiseu": 233,
+        "Total": 1870
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Informare",
+        "Online": 2210,
+        "Ghiseu": 945,
+        "Total": 3155
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Inscriere",
+        "Online": 1553,
+        "Ghiseu": 410,
+        "Total": 1963
+      },
+      {
+        "Name": "GIURGIU",
+        "RequestType": "Receptie",
+        "Online": 1362,
+        "Ghiseu": 26,
+        "Total": 1388
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Informare",
+        "Online": 2272,
+        "Ghiseu": 864,
+        "Total": 3136
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Inscriere",
+        "Online": 1623,
+        "Ghiseu": 530,
+        "Total": 2153
+      },
+      {
+        "Name": "GORJ",
+        "RequestType": "Receptie",
+        "Online": 1400,
+        "Ghiseu": 140,
+        "Total": 1540
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Altele",
+        "Online": 60,
+        "Ghiseu": 0,
+        "Total": 60
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Informare",
+        "Online": 2071,
+        "Ghiseu": 2525,
+        "Total": 4596
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Inscriere",
+        "Online": 1653,
+        "Ghiseu": 1254,
+        "Total": 2907
+      },
+      {
+        "Name": "HARGHITA",
+        "RequestType": "Receptie",
+        "Online": 1062,
+        "Ghiseu": 319,
+        "Total": 1381
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Altele",
+        "Online": 69,
+        "Ghiseu": 0,
+        "Total": 69
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Informare",
+        "Online": 2380,
+        "Ghiseu": 8260,
+        "Total": 10640
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Inscriere",
+        "Online": 2111,
+        "Ghiseu": 799,
+        "Total": 2910
+      },
+      {
+        "Name": "HUNEDOARA",
+        "RequestType": "Receptie",
+        "Online": 1290,
+        "Ghiseu": 87,
+        "Total": 1377
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Informare",
+        "Online": 2924,
+        "Ghiseu": 1804,
+        "Total": 4728
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Inscriere",
+        "Online": 2392,
+        "Ghiseu": 772,
+        "Total": 3164
+      },
+      {
+        "Name": "IALOMIȚA",
+        "RequestType": "Receptie",
+        "Online": 952,
+        "Ghiseu": 43,
+        "Total": 995
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Informare",
+        "Online": 6300,
+        "Ghiseu": 6659,
+        "Total": 12959
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Inscriere",
+        "Online": 5566,
+        "Ghiseu": 841,
+        "Total": 6407
+      },
+      {
+        "Name": "IAȘI",
+        "RequestType": "Receptie",
+        "Online": 2870,
+        "Ghiseu": 78,
+        "Total": 2948
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Informare",
+        "Online": 15281,
+        "Ghiseu": 1472,
+        "Total": 16753
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Inscriere",
+        "Online": 11960,
+        "Ghiseu": 1488,
+        "Total": 13448
+      },
+      {
+        "Name": "ILFOV",
+        "RequestType": "Receptie",
+        "Online": 4156,
+        "Ghiseu": 159,
+        "Total": 4315
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Altele",
+        "Online": 152,
+        "Ghiseu": 0,
+        "Total": 152
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Informare",
+        "Online": 2841,
+        "Ghiseu": 3884,
+        "Total": 6725
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Inscriere",
+        "Online": 1805,
+        "Ghiseu": 687,
+        "Total": 2492
+      },
+      {
+        "Name": "MARAMUREȘ",
+        "RequestType": "Receptie",
+        "Online": 1466,
+        "Ghiseu": 93,
+        "Total": 1559
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Informare",
+        "Online": 5345,
+        "Ghiseu": 1497,
+        "Total": 6842
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Inscriere",
+        "Online": 1202,
+        "Ghiseu": 445,
+        "Total": 1647
+      },
+      {
+        "Name": "MEHEDINȚI",
+        "RequestType": "Receptie",
+        "Online": 1301,
+        "Ghiseu": 47,
+        "Total": 1348
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Altele",
+        "Online": 79,
+        "Ghiseu": 0,
+        "Total": 79
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Informare",
+        "Online": 3903,
+        "Ghiseu": 3271,
+        "Total": 7174
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Inscriere",
+        "Online": 2807,
+        "Ghiseu": 668,
+        "Total": 3475
+      },
+      {
+        "Name": "MUREȘ",
+        "RequestType": "Receptie",
+        "Online": 1516,
+        "Ghiseu": 159,
+        "Total": 1675
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Informare",
+        "Online": 3050,
+        "Ghiseu": 6488,
+        "Total": 9538
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Inscriere",
+        "Online": 2448,
+        "Ghiseu": 804,
+        "Total": 3252
+      },
+      {
+        "Name": "NEAMȚ",
+        "RequestType": "Receptie",
+        "Online": 1937,
+        "Ghiseu": 49,
+        "Total": 1986
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Informare",
+        "Online": 2923,
+        "Ghiseu": 1039,
+        "Total": 3962
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Inscriere",
+        "Online": 2551,
+        "Ghiseu": 694,
+        "Total": 3245
+      },
+      {
+        "Name": "OLT",
+        "RequestType": "Receptie",
+        "Online": 2075,
+        "Ghiseu": 79,
+        "Total": 2154
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Informare",
+        "Online": 4944,
+        "Ghiseu": 3698,
+        "Total": 8642
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Inscriere",
+        "Online": 3757,
+        "Ghiseu": 955,
+        "Total": 4712
+      },
+      {
+        "Name": "PRAHOVA",
+        "RequestType": "Receptie",
+        "Online": 2693,
+        "Ghiseu": 104,
+        "Total": 2797
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Altele",
+        "Online": 66,
+        "Ghiseu": 0,
+        "Total": 66
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Informare",
+        "Online": 1376,
+        "Ghiseu": 1813,
+        "Total": 3189
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Inscriere",
+        "Online": 1046,
+        "Ghiseu": 262,
+        "Total": 1308
+      },
+      {
+        "Name": "SĂLAJ",
+        "RequestType": "Receptie",
+        "Online": 1001,
+        "Ghiseu": 230,
+        "Total": 1231
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Altele",
+        "Online": 84,
+        "Ghiseu": 0,
+        "Total": 84
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Informare",
+        "Online": 2732,
+        "Ghiseu": 3034,
+        "Total": 5766
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Inscriere",
+        "Online": 2522,
+        "Ghiseu": 679,
+        "Total": 3201
+      },
+      {
+        "Name": "SATU MARE",
+        "RequestType": "Receptie",
+        "Online": 1592,
+        "Ghiseu": 64,
+        "Total": 1656
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Altele",
+        "Online": 88,
+        "Ghiseu": 0,
+        "Total": 88
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Informare",
+        "Online": 3877,
+        "Ghiseu": 2910,
+        "Total": 6787
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Inscriere",
+        "Online": 2849,
+        "Ghiseu": 694,
+        "Total": 3543
+      },
+      {
+        "Name": "SIBIU",
+        "RequestType": "Receptie",
+        "Online": 1395,
+        "Ghiseu": 103,
+        "Total": 1498
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Altele",
+        "Online": 24,
+        "Ghiseu": 0,
+        "Total": 24
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Informare",
+        "Online": 4362,
+        "Ghiseu": 3018,
+        "Total": 7380
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Inscriere",
+        "Online": 3708,
+        "Ghiseu": 2295,
+        "Total": 6003
+      },
+      {
+        "Name": "SUCEAVA",
+        "RequestType": "Receptie",
+        "Online": 3355,
+        "Ghiseu": 204,
+        "Total": 3559
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Altele",
+        "Online": 1,
+        "Ghiseu": 0,
+        "Total": 1
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Informare",
+        "Online": 2396,
+        "Ghiseu": 1891,
+        "Total": 4287
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Inscriere",
+        "Online": 1598,
+        "Ghiseu": 1880,
+        "Total": 3478
+      },
+      {
+        "Name": "TELEORMAN",
+        "RequestType": "Receptie",
+        "Online": 1121,
+        "Ghiseu": 149,
+        "Total": 1270
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Altele",
+        "Online": 65,
+        "Ghiseu": 9,
+        "Total": 74
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Informare",
+        "Online": 9521,
+        "Ghiseu": 4318,
+        "Total": 13839
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Inscriere",
+        "Online": 6858,
+        "Ghiseu": 1703,
+        "Total": 8561
+      },
+      {
+        "Name": "TIMIȘ",
+        "RequestType": "Receptie",
+        "Online": 2516,
+        "Ghiseu": 105,
+        "Total": 2621
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Informare",
+        "Online": 2910,
+        "Ghiseu": 1131,
+        "Total": 4041
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Inscriere",
+        "Online": 2218,
+        "Ghiseu": 890,
+        "Total": 3108
+      },
+      {
+        "Name": "TULCEA",
+        "RequestType": "Receptie",
+        "Online": 864,
+        "Ghiseu": 28,
+        "Total": 892
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Informare",
+        "Online": 1941,
+        "Ghiseu": 1759,
+        "Total": 3700
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Inscriere",
+        "Online": 2497,
+        "Ghiseu": 559,
+        "Total": 3056
+      },
+      {
+        "Name": "VÂLCEA",
+        "RequestType": "Receptie",
+        "Online": 1700,
+        "Ghiseu": 300,
+        "Total": 2000
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Informare",
+        "Online": 2701,
+        "Ghiseu": 3253,
+        "Total": 5954
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Inscriere",
+        "Online": 2594,
+        "Ghiseu": 534,
+        "Total": 3128
+      },
+      {
+        "Name": "VASLUI",
+        "RequestType": "Receptie",
+        "Online": 1409,
+        "Ghiseu": 29,
+        "Total": 1438
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Altele",
+        "Online": 0,
+        "Ghiseu": 0,
+        "Total": 0
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Informare",
+        "Online": 2795,
+        "Ghiseu": 5730,
+        "Total": 8525
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Inscriere",
+        "Online": 2460,
+        "Ghiseu": 532,
+        "Total": 2992
+      },
+      {
+        "Name": "VRANCEA",
+        "RequestType": "Receptie",
+        "Online": 1905,
+        "Ghiseu": 33,
+        "Total": 1938
+      },
+      {
+        "Name": "TOTAL",
+        "RequestType": "Unknown",
+        "Online": 425294,
+        "Ghiseu": 166819,
+        "Total": 592113
+      }
+    ],
     "IPOTECI": [
       {
         "Name": "ALBA",
