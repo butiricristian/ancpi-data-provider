@@ -5,11 +5,15 @@ import (
 	"net/http"
 	"os"
 
-	"com.butiricristian/ancpi-data-provider/parserjob"
+	"com.butiricristian/ancpi-data-provider/models"
 )
 
-func processCereriData(data map[string][]parserjob.CereriStateData) map[string][]parserjob.CereriStateData {
-	return data
+func processCereriData(data []*models.MonthlyData) []*models.CereriStateData {
+	var cereriData []*models.CereriStateData
+	for _, val := range data {
+		cereriData = append(cereriData, val.CereriData...)
+	}
+	return cereriData
 }
 
 func GetCereriData(w http.ResponseWriter, r *http.Request) {
@@ -17,12 +21,12 @@ func GetCereriData(w http.ResponseWriter, r *http.Request) {
 	// dateStart := r.URL.Query().Get("dataStart")
 	// dateEnd := r.URL.Query().Get("dataEnd")
 
-	fileData, err := os.ReadFile("data/cereri.json")
+	fileData, err := os.ReadFile("data/data.json")
 	if err != nil {
 		return
 	}
 
-	var data map[string][]parserjob.CereriStateData
+	var data []*models.MonthlyData
 	json.Unmarshal(fileData, &data)
 	result := processCereriData(data)
 	json.NewEncoder(w).Encode(result)

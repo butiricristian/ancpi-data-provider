@@ -5,11 +5,15 @@ import (
 	"net/http"
 	"os"
 
-	"com.butiricristian/ancpi-data-provider/parserjob"
+	"com.butiricristian/ancpi-data-provider/models"
 )
 
-func processIpoteciData(data map[string][]parserjob.IpoteciStateData) map[string][]parserjob.IpoteciStateData {
-	return data
+func processIpoteciData(data []*models.MonthlyData) []*models.IpoteciStateData {
+	var ipoteciData []*models.IpoteciStateData
+	for _, val := range data {
+		ipoteciData = append(ipoteciData, val.IpoteciData...)
+	}
+	return ipoteciData
 }
 
 func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
@@ -17,12 +21,12 @@ func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
 	// dateStart := r.URL.Query().Get("dataStart")
 	// dateEnd := r.URL.Query().Get("dataEnd")
 
-	fileData, err := os.ReadFile("data/ipoteci.json")
+	fileData, err := os.ReadFile("data/data.json")
 	if err != nil {
 		return
 	}
 
-	var data map[string][]parserjob.IpoteciStateData
+	var data []*models.MonthlyData
 	json.Unmarshal(fileData, &data)
 	result := processIpoteciData(data)
 

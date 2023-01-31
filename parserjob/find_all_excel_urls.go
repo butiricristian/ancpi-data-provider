@@ -202,6 +202,7 @@ func FindAllExcelUrls() []*ExcelUrl {
 		excelUrls = append(excelUrls, url)
 		bar.Add(1)
 	}
+	fmt.Println()
 
 	return excelUrls
 }

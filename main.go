@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
-	"strings"
 	"time"
 
 	"com.butiricristian/ancpi-data-provider/api"
+	"com.butiricristian/ancpi-data-provider/models"
 	"com.butiricristian/ancpi-data-provider/parserjob"
 )
 
@@ -20,23 +20,21 @@ func openFile(fileName string) (*os.File, error) {
 	return f, nil
 }
 
-func saveToFile(data map[string]map[string][]parserjob.StateData) {
-	for key, currentData := range data {
-		fileName := fmt.Sprintf("data/%s.json", strings.ToLower(key))
-		dataFile, err := openFile(fileName)
-		if err != nil {
-			fmt.Println(err)
-			continue
-		}
-		defer dataFile.Close()
-
-		dataBytes, err := json.Marshal(currentData)
-		if err != nil {
-			fmt.Printf("Error marshaling data: %+v", err)
-			continue
-		}
-		dataFile.Write(dataBytes)
+func saveToFile(data []*models.MonthlyData) {
+	fileName := "data/data.json"
+	dataFile, err := openFile(fileName)
+	if err != nil {
+		fmt.Println(err)
+		return
 	}
+	defer dataFile.Close()
+
+	dataBytes, err := json.Marshal(data)
+	if err != nil {
+		fmt.Printf("Error marshaling data: %+v", err)
+		return
+	}
+	dataFile.Write(dataBytes)
 }
 
 func getAllData() {

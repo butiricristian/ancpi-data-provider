@@ -1,161 +1,22 @@
 package parserjob
 
 import (
-	"encoding/json"
 	"fmt"
-	"strconv"
-	"strings"
 	"sync"
 
+	"com.butiricristian/ancpi-data-provider/helpers"
+	"com.butiricristian/ancpi-data-provider/models"
 	"github.com/schollz/progressbar/v3"
 	"github.com/xuri/excelize/v2"
+	"golang.org/x/exp/maps"
 )
-
-type RequestType int64
-
-const (
-	ALTELE RequestType = iota
-	INFORMARE
-	INSCRIERE
-	RECEPTIE
-	UNDEFINED
-)
-
-func (rt RequestType) String() string {
-	switch rt {
-	case ALTELE:
-		return "Altele"
-	case INFORMARE:
-		return "Informare"
-	case INSCRIERE:
-		return "Inscriere"
-	case RECEPTIE:
-		return "Receptie"
-	}
-	return "Unknown"
-}
-
-func (rt RequestType) MarshalJSON() ([]byte, error) {
-	value, err := json.Marshal(rt.String())
-	return value, err
-}
-
-func getRequestType(val string) RequestType {
-	switch val {
-	case "altele":
-		return ALTELE
-	case "informare":
-		return INFORMARE
-	case "inscriere":
-		return INSCRIERE
-	case "receptie":
-		return RECEPTIE
-	}
-	return UNDEFINED
-}
-
-type StateData interface {
-	printData() string
-}
-
-type VanzariStateData struct {
-	Name            string
-	Agricol         int
-	Neagricol       int
-	Constructie     int
-	FaraConstructie int
-	Total           int
-}
-
-type IpoteciStateData struct {
-	VanzariStateData
-	Active bool
-}
-
-type CereriStateData struct {
-	Name        string
-	RequestType RequestType
-	Online      int
-	Ghiseu      int
-	Total       int
-}
 
 type ParseResult struct {
-	dataType string
-	dateKey  string
-	data     []StateData
-}
-
-func (data *VanzariStateData) printData() string {
-	return fmt.Sprintf("%v", *data)
-}
-
-func (data *IpoteciStateData) printData() string {
-	return fmt.Sprintf("%v", *data)
-}
-
-func (data *CereriStateData) printData() string {
-	return fmt.Sprintf("%v", *data)
-}
-
-func convertToInt(val string) int {
-	val = strings.ReplaceAll(val, ",", "")
-	converted, err := strconv.Atoi(val)
-	if err != nil {
-		fmt.Printf("Value is not a number: %v", err)
-		return -1
-	}
-
-	return converted
-}
-
-func createVanzariData(row []string) VanzariStateData {
-	return VanzariStateData{
-		Name:            row[1],
-		Agricol:         convertToInt(row[2]),
-		Neagricol:       convertToInt(row[3]),
-		Constructie:     convertToInt(row[4]),
-		FaraConstructie: convertToInt(row[5]),
-		Total:           convertToInt(row[6]),
-	}
-}
-
-func createIpoteciData(row []string) (IpoteciStateData, IpoteciStateData) {
-	active := IpoteciStateData{
-		VanzariStateData{
-			Name:            row[1],
-			Agricol:         convertToInt(row[2]),
-			Neagricol:       convertToInt(row[3]),
-			Constructie:     convertToInt(row[6]),
-			FaraConstructie: convertToInt(row[7]),
-			Total:           convertToInt(row[10]),
-		},
-		true,
-	}
-	inactive := IpoteciStateData{
-		VanzariStateData{
-			Name:            row[1],
-			Agricol:         convertToInt(row[4]),
-			Neagricol:       convertToInt(row[5]),
-			Constructie:     convertToInt(row[8]),
-			FaraConstructie: convertToInt(row[9]),
-			Total:           convertToInt(row[11]),
-		},
-		false,
-	}
-	return active, inactive
-}
-
-func createCereriData(row []string) CereriStateData {
-	online := convertToInt(row[3])
-	ghiseu := convertToInt(row[4])
-	return CereriStateData{
-		Name:        row[1],
-		RequestType: getRequestType(row[2]),
-		Online:      online,
-		Ghiseu:      ghiseu,
-		Total:       online + ghiseu,
-	}
+	dataType    string
+	dateKey     string
+	dataCereri  []*models.CereriStateData
+	dataIpoteci []*models.IpoteciStateData
+	dataVanzari []*models.VanzariStateData
 }
 
 func getNrOfHeaders(rows [][]string) int {
@@ -166,34 +27,34 @@ func getNrOfHeaders(rows [][]string) int {
 	return headers
 }
 
-func parseExcelVanzari(rows [][]string) []StateData {
+func parseExcelVanzari(rows [][]string) []*models.VanzariStateData {
 	HEADER_ROWS := getNrOfHeaders(rows)
 	nrRows := 43
-	var data []StateData = make([]StateData, nrRows)
+	var data []*models.VanzariStateData = make([]*models.VanzariStateData, nrRows)
 	for i := 0; i < nrRows; i++ {
 		row := rows[i+HEADER_ROWS]
 		if len(row) <= 2 || row[1] == "" {
 			continue
 		}
 
-		currentData := createVanzariData(row)
+		currentData := models.CreateVanzariData(row)
 		data[i] = &currentData
 	}
 
 	return data
 }
 
-func parseExcelIpoteci(rows [][]string) []StateData {
+func parseExcelIpoteci(rows [][]string) []*models.IpoteciStateData {
 	HEADER_ROWS := getNrOfHeaders(rows)
 	nrRows := 43
-	var data []StateData = make([]StateData, 2*nrRows)
+	var data []*models.IpoteciStateData = make([]*models.IpoteciStateData, 2*nrRows)
 	for i := 0; i < nrRows; i++ {
 		row := rows[i+HEADER_ROWS]
 		if len(row) <= 2 || row[1] == "" {
 			continue
 		}
 
-		currentDataActive, currentDataInactive := createIpoteciData(row)
+		currentDataActive, currentDataInactive := models.CreateIpoteciData(row)
 		data[2*i] = &currentDataActive
 		data[2*i+1] = &currentDataInactive
 	}
@@ -201,10 +62,10 @@ func parseExcelIpoteci(rows [][]string) []StateData {
 	return data
 }
 
-func parseExcelCereri(rows [][]string) []StateData {
+func parseExcelCereri(rows [][]string) []*models.CereriStateData {
 	HEADER_ROWS := getNrOfHeaders(rows)
 	nrRows := 42*4 + 1
-	var data []StateData = make([]StateData, nrRows)
+	var data []*models.CereriStateData = make([]*models.CereriStateData, nrRows)
 
 	for i := 0; i < nrRows; i++ {
 		row := rows[i+HEADER_ROWS]
@@ -215,7 +76,7 @@ func parseExcelCereri(rows [][]string) []StateData {
 			row[1] = rows[i/4*4+HEADER_ROWS][1]
 		}
 
-		currentData := createCereriData(row)
+		currentData := models.CreateCereriData(row)
 		data[i] = &currentData
 	}
 
@@ -247,26 +108,34 @@ func ParseExcel(excelUrl *ExcelUrl, dataChannel chan<- *ParseResult, wg *sync.Wa
 		return
 	}
 
-	var data []StateData
+	dateKey := fmt.Sprintf("%s, %s", excelUrl.month, excelUrl.year)
 	switch excelUrl.name {
 	case "VANZARI":
-		data = parseExcelVanzari(rows)
+		data := parseExcelVanzari(rows)
+		dataChannel <- &ParseResult{
+			dataType:    excelUrl.name,
+			dateKey:     dateKey,
+			dataVanzari: data,
+		}
 	case "IPOTECI":
-		data = parseExcelIpoteci(rows)
+		data := parseExcelIpoteci(rows)
+		dataChannel <- &ParseResult{
+			dataType:    excelUrl.name,
+			dateKey:     dateKey,
+			dataIpoteci: data,
+		}
 	case "CERERI":
-		data = parseExcelCereri(rows)
-	}
-
-	dateKey := fmt.Sprintf("%s, %s", excelUrl.month, excelUrl.year)
-	dataChannel <- &ParseResult{
-		dataType: excelUrl.name,
-		dateKey:  dateKey,
-		data:     data,
+		data := parseExcelCereri(rows)
+		dataChannel <- &ParseResult{
+			dataType:   excelUrl.name,
+			dateKey:    dateKey,
+			dataCereri: data,
+		}
 	}
 }
 
-func GetDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData {
-	data := make(map[string]map[string][]StateData)
+func GetDataFromExcels(excelUrls []*ExcelUrl) []*models.MonthlyData {
+	data := map[string]*models.MonthlyData{}
 
 	dataChannel := make(chan *ParseResult)
 	var wg sync.WaitGroup
@@ -287,13 +156,26 @@ func GetDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData 
 		progressbar.OptionUseANSICodes(true),
 		progressbar.OptionSetDescription("[2/2] Parsing excels: "),
 	)
+
 	for receivedData := range dataChannel {
-		if data[receivedData.dataType] == nil {
-			data[receivedData.dataType] = make(map[string][]StateData)
+		if _, ok := data[receivedData.dateKey]; !ok {
+			data[receivedData.dateKey] = &models.MonthlyData{
+				CurrentDate: helpers.ConvertToTime(receivedData.dateKey),
+			}
 		}
-		data[receivedData.dataType][receivedData.dateKey] = receivedData.data
+
+		switch receivedData.dataType {
+		case "CERERI":
+			data[receivedData.dateKey].CereriData = receivedData.dataCereri
+		case "VANZARI":
+			data[receivedData.dateKey].VanzariData = receivedData.dataVanzari
+		case "IPOTECI":
+			data[receivedData.dateKey].IpoteciData = receivedData.dataIpoteci
+		}
+
 		bar.Add(1)
 	}
+	fmt.Println()
 
-	return data
+	return maps.Values(data)
 }
