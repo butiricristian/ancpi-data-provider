@@ -4,11 +4,15 @@ import (
 	"encoding/json"
 	"fmt"
 	"os"
+	"strings"
 	"time"
+
+	"com.butiricristian/ancpi-data-provider/api"
+	"com.butiricristian/ancpi-data-provider/parserjob"
 )
 
-func openFile() (*os.File, error) {
-	f, err := os.OpenFile("data.json", os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
+func openFile(fileName string) (*os.File, error) {
+	f, err := os.OpenFile(fileName, os.O_RDWR|os.O_CREATE|os.O_EXCL, 0666)
 	if err != nil {
 		return nil, err
 	}
@@ -16,27 +20,30 @@ func openFile() (*os.File, error) {
 	return f, nil
 }
 
-func saveToFile(data map[string]map[string][]StateData, f *os.File) {
-	dataBytes, err := json.Marshal(data)
-	if err != nil {
-		fmt.Printf("Error marshaling data: %+v", err)
-		return
+func saveToFile(data map[string]map[string][]parserjob.StateData) {
+	for key, currentData := range data {
+		fileName := fmt.Sprintf("data/%s.json", strings.ToLower(key))
+		dataFile, err := openFile(fileName)
+		if err != nil {
+			fmt.Println(err)
+			continue
+		}
+		defer dataFile.Close()
+
+		dataBytes, err := json.Marshal(currentData)
+		if err != nil {
+			fmt.Printf("Error marshaling data: %+v", err)
+			continue
+		}
+		dataFile.Write(dataBytes)
 	}
-	f.Write(dataBytes)
 }
 
 func getAllData() {
-	dataFile, err := openFile()
-	if err != nil {
-		fmt.Println(err)
-		return
-	}
-	defer dataFile.Close()
+	excelUrls := parserjob.FindAllExcelUrls()
+	data := parserjob.GetDataFromExcels(excelUrls)
 
-	excelUrls := findAllExcelUrls()
-	data := getDataFromExcels(excelUrls)
-
-	saveToFile(data, dataFile)
+	saveToFile(data)
 }
 
 func main() {
@@ -44,4 +51,5 @@ func main() {
 	fmt.Printf("Hello World! %v\n", now)
 
 	getAllData()
+	api.StartServer()
 }

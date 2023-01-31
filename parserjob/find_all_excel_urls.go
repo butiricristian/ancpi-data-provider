@@ -1,4 +1,4 @@
-package main
+package parserjob
 
 import (
 	"fmt"
@@ -174,7 +174,7 @@ func getUrls(month string, year string, urlsChannel chan<- *ExcelUrl, wg *sync.W
 	}
 }
 
-func findAllExcelUrls() []*ExcelUrl {
+func FindAllExcelUrls() []*ExcelUrl {
 	var excelUrls []*ExcelUrl
 
 	urlsChannel := make(chan *ExcelUrl)

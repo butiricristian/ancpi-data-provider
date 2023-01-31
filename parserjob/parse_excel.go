@@ -1,4 +1,4 @@
-package main
+package parserjob
 
 import (
 	"encoding/json"
@@ -222,7 +222,7 @@ func parseExcelCereri(rows [][]string) []StateData {
 	return data
 }
 
-func parseExcel(excelUrl *ExcelUrl, dataChannel chan<- *ParseResult, wg *sync.WaitGroup) {
+func ParseExcel(excelUrl *ExcelUrl, dataChannel chan<- *ParseResult, wg *sync.WaitGroup) {
 	// fmt.Printf("Parsing excel %s, %s - %s\n", excelUrl.month, excelUrl.year, excelUrl.name)
 	defer wg.Done()
 
@@ -265,7 +265,7 @@ func parseExcel(excelUrl *ExcelUrl, dataChannel chan<- *ParseResult, wg *sync.Wa
 	}
 }
 
-func getDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData {
+func GetDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData {
 	data := make(map[string]map[string][]StateData)
 
 	dataChannel := make(chan *ParseResult)
@@ -273,7 +273,7 @@ func getDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData 
 
 	for _, excelUrl := range excelUrls {
 		wg.Add(1)
-		go parseExcel(excelUrl, dataChannel, &wg)
+		go ParseExcel(excelUrl, dataChannel, &wg)
 	}
 
 	go func() {
@@ -288,30 +288,12 @@ func getDataFromExcels(excelUrls []*ExcelUrl) map[string]map[string][]StateData 
 		progressbar.OptionSetDescription("[2/2] Parsing excels: "),
 	)
 	for receivedData := range dataChannel {
-		if data[receivedData.dateKey] == nil {
-			data[receivedData.dateKey] = make(map[string][]StateData)
+		if data[receivedData.dataType] == nil {
+			data[receivedData.dataType] = make(map[string][]StateData)
 		}
-		data[receivedData.dateKey][receivedData.dataType] = receivedData.data
+		data[receivedData.dataType][receivedData.dateKey] = receivedData.data
 		bar.Add(1)
 	}
 
 	return data
 }
-
-// func printData(data map[string]map[string][]StateData) {
-// 	for date, dateValues := range data {
-// 		fmt.Printf("\n%s - VANZARI: \n", date)
-// 		for _, stateData := range dateValues["VANZARI"] {
-// 			fmt.Printf("%v", stateData.printData())
-// 		}
-// 		fmt.Printf("\n%s - IPOTECI: \n", date)
-// 		for _, stateData := range dateValues["IPOTECI"] {
-// 			fmt.Printf("%v", stateData.printData())
-// 		}
-// 		fmt.Printf("\n%s - CERERI: \n", date)
-// 		for _, stateData := range dateValues["CERERI"] {
-// 			fmt.Printf("%v", stateData.printData())
-// 		}
-// 		fmt.Println()
-// 	}
-// }

@@ -3,6 +3,7 @@ module com.butiricristian/ancpi-data-provider
 go 1.19
 
 require (
+	github.com/schollz/progressbar/v3 v3.13.0
 	github.com/xuri/excelize/v2 v2.7.0
 	golang.org/x/net v0.5.0
 )
@@ -14,7 +15,6 @@ require (
 	github.com/richardlehane/mscfb v1.0.4 // indirect
 	github.com/richardlehane/msoleps v1.0.3 // indirect
 	github.com/rivo/uniseg v0.4.3 // indirect
-	github.com/schollz/progressbar/v3 v3.13.0 // indirect
 	github.com/xuri/efp v0.0.0-20220603152613-6918739fd470 // indirect
 	github.com/xuri/nfp v0.0.0-20220409054826-5e722a1d9e22 // indirect
 	golang.org/x/crypto v0.5.0 // indirect
