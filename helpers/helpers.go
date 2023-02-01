@@ -50,9 +50,9 @@ func TranslateMonth(month string) time.Month {
 }
 
 func ConvertToTime(val string) time.Time {
-	monthAndYear := strings.Split(val, ", ")
-	month := TranslateMonth(monthAndYear[0])
-	year := ConvertToInt(monthAndYear[1])
+	monthAndYear := strings.Split(val, ",")
+	month := TranslateMonth(strings.TrimSpace(monthAndYear[0]))
+	year := ConvertToInt(strings.TrimSpace(monthAndYear[1]))
 
-	return time.Date(year, month, 0, 0, 0, 0, 0, time.UTC)
+	return time.Date(year, month, 1, 0, 0, 0, 0, time.UTC)
 }
