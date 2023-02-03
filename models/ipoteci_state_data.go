@@ -19,7 +19,7 @@ func CreateIpoteciData(row []string) (IpoteciStateData, IpoteciStateData) {
 	total := helpers.ConvertToInt(row[2]) + helpers.ConvertToInt(row[3]) + helpers.ConvertToInt(row[6]) + helpers.ConvertToInt(row[7])
 	active := IpoteciStateData{
 		VanzariStateData{
-			Name:            row[1],
+			Name:            helpers.ReplaceSpecialCharacters(row[1]),
 			Agricol:         helpers.ConvertToInt(row[2]),
 			Neagricol:       helpers.ConvertToInt(row[3]),
 			Constructie:     helpers.ConvertToInt(row[6]),
@@ -31,7 +31,7 @@ func CreateIpoteciData(row []string) (IpoteciStateData, IpoteciStateData) {
 	total = helpers.ConvertToInt(row[4]) + helpers.ConvertToInt(row[5]) + helpers.ConvertToInt(row[8]) + helpers.ConvertToInt(row[9])
 	inactive := IpoteciStateData{
 		VanzariStateData{
-			Name:            row[1],
+			Name:            helpers.ReplaceSpecialCharacters(row[1]),
 			Agricol:         helpers.ConvertToInt(row[4]),
 			Neagricol:       helpers.ConvertToInt(row[5]),
 			Constructie:     helpers.ConvertToInt(row[8]),

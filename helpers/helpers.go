@@ -56,3 +56,12 @@ func ConvertToTime(val string) time.Time {
 
 	return time.Date(year, month, 1, 0, 0, 0, 0, time.UTC)
 }
+
+func ReplaceSpecialCharacters(val string) string {
+	res := strings.ReplaceAll(val, "Ă", "A")
+	res = strings.ReplaceAll(res, "Â", "A")
+	res = strings.ReplaceAll(res, "Î", "I")
+	res = strings.ReplaceAll(res, "Ș", "S")
+	res = strings.ReplaceAll(res, "Ț", "T")
+	return res
+}

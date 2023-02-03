@@ -3,17 +3,27 @@ package api
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/rs/cors"
 )
 
 func StartServer() {
-	srv := &http.Server{
-		Addr: ":8080",
-	}
+	mux := &http.ServeMux{}
 
-	http.HandleFunc("/cereri", GetCereriData)
-	http.HandleFunc("/ipoteci", GetIpoteciData)
-	http.HandleFunc("/vanzari", GetVanzariData)
+	mux.HandleFunc("/cereri", GetCereriData)
+	mux.HandleFunc("/ipoteci", GetIpoteciData)
+	mux.HandleFunc("/vanzari", GetVanzariData)
 
 	fmt.Println("Listening on port 8080...")
-	srv.ListenAndServe()
+	cors := cors.New(cors.Options{
+		AllowedOrigins: []string{"http://localhost:3002", "https://www.cristianbutiri.com"},
+		AllowedMethods: []string{
+			http.MethodPost,
+			http.MethodGet,
+		},
+		AllowedHeaders:   []string{"*"},
+		AllowCredentials: false,
+	})
+	handler := cors.Handler(mux)
+	http.ListenAndServe(":8080", handler)
 }

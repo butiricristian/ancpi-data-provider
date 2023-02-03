@@ -1,6 +1,9 @@
 package models
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"strings"
+)
 
 type RequestType int64
 
@@ -31,7 +34,18 @@ func (rt RequestType) MarshalJSON() ([]byte, error) {
 	return value, err
 }
 
-func getRequestType(val string) RequestType {
+func (rt *RequestType) UnmarshalJSON(data []byte) error {
+	var rtString string
+	err := json.Unmarshal(data, &rtString)
+	if err != nil {
+		return err
+	}
+
+	*rt = GetRequestType(strings.ToLower(rtString))
+	return nil
+}
+
+func GetRequestType(val string) RequestType {
 	switch val {
 	case "altele":
 		return ALTELE

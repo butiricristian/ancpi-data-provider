@@ -2,6 +2,7 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 
@@ -13,7 +14,10 @@ import (
 func filterVanzariByInterval(dateStart time.Time, dateEnd time.Time) map[time.Time][]*models.VanzariStateData {
 	vanzariData := map[time.Time][]*models.VanzariStateData{}
 	for _, val := range data.Data {
-		if val.CurrentDate.Before(dateStart) || val.CurrentDate.After(dateEnd) {
+		if !dateStart.IsZero() && val.CurrentDate.Before(dateStart) {
+			continue
+		}
+		if !dateEnd.IsZero() && val.CurrentDate.After(dateEnd) {
 			continue
 		}
 		vanzariData[val.CurrentDate] = val.VanzariData
@@ -21,18 +25,15 @@ func filterVanzariByInterval(dateStart time.Time, dateEnd time.Time) map[time.Ti
 	return vanzariData
 }
 
-func filterVanzariByJudet(result map[time.Time][]*models.VanzariStateData, judet string) map[time.Time][]*models.VanzariStateData {
+func filterVanzariByJudet(result map[time.Time][]*models.VanzariStateData, judet string) map[time.Time]*models.VanzariStateData {
 	if judet == "" {
 		judet = "TOTAL"
 	}
-	newResult := map[time.Time][]*models.VanzariStateData{}
+	newResult := map[time.Time]*models.VanzariStateData{}
 	for key, data := range result {
 		for _, val := range data {
 			if val.Name == judet {
-				if _, ok := newResult[key]; !ok {
-					newResult[key] = []*models.VanzariStateData{}
-				}
-				newResult[key] = append(newResult[key], val)
+				newResult[key] = val
 			}
 		}
 	}
@@ -40,11 +41,18 @@ func filterVanzariByJudet(result map[time.Time][]*models.VanzariStateData, judet
 }
 
 func GetVanzariData(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Getting Vanzari Data")
 	judet := r.URL.Query().Get("judet")
-	dateStart := helpers.ConvertToTime(r.URL.Query().Get("dateStart"))
-	dateEnd := helpers.ConvertToTime(r.URL.Query().Get("dateEnd"))
+	var dateStart time.Time
+	var dateEnd time.Time
+	if dateStartString := r.URL.Query().Get("dateStart"); dateStartString != "" {
+		dateStart = helpers.ConvertToTime(dateStartString)
+	}
+	if dateEndString := r.URL.Query().Get("dateEnd"); dateEndString != "" {
+		dateEnd = helpers.ConvertToTime(dateEndString)
+	}
 
-	result := filterVanzariByInterval(dateStart, dateEnd)
-	result = filterVanzariByJudet(result, judet)
+	resultByInterval := filterVanzariByInterval(dateStart, dateEnd)
+	result := filterVanzariByJudet(resultByInterval, judet)
 	json.NewEncoder(w).Encode(result)
 }

@@ -2,7 +2,9 @@ package api
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
+	"strconv"
 	"time"
 
 	"com.butiricristian/ancpi-data-provider/data"
@@ -13,7 +15,10 @@ import (
 func filterIpoteciByInterval(dateStart time.Time, dateEnd time.Time) map[time.Time][]*models.IpoteciStateData {
 	ipoteciData := map[time.Time][]*models.IpoteciStateData{}
 	for _, val := range data.Data {
-		if val.CurrentDate.Before(dateStart) || val.CurrentDate.After(dateEnd) {
+		if !dateStart.IsZero() && val.CurrentDate.Before(dateStart) {
+			continue
+		}
+		if !dateEnd.IsZero() && val.CurrentDate.After(dateEnd) {
 			continue
 		}
 		ipoteciData[val.CurrentDate] = val.IpoteciData
@@ -39,12 +44,36 @@ func filterIpoteciByJudet(result map[time.Time][]*models.IpoteciStateData, judet
 	return newResult
 }
 
-func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
-	judet := r.URL.Query().Get("judet")
-	dateStart := helpers.ConvertToTime(r.URL.Query().Get("dateStart"))
-	dateEnd := helpers.ConvertToTime(r.URL.Query().Get("dateEnd"))
+func filterIpoteciByActive(result map[time.Time][]*models.IpoteciStateData, active bool) map[time.Time]*models.IpoteciStateData {
+	newResult := map[time.Time]*models.IpoteciStateData{}
+	for key, data := range result {
+		for _, val := range data {
+			if val.Active == active {
+				newResult[key] = val
+			}
+		}
+	}
+	return newResult
+}
 
-	result := filterIpoteciByInterval(dateStart, dateEnd)
-	result = filterIpoteciByJudet(result, judet)
+func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("Getting Ipoteci Data")
+	judet := r.URL.Query().Get("judet")
+	active, err := strconv.ParseBool(r.URL.Query().Get("active"))
+	if err != nil {
+		active = true
+	}
+	var dateStart time.Time
+	var dateEnd time.Time
+	if dateStartString := r.URL.Query().Get("dateStart"); dateStartString != "" {
+		dateStart = helpers.ConvertToTime(dateStartString)
+	}
+	if dateEndString := r.URL.Query().Get("dateEnd"); dateEndString != "" {
+		dateEnd = helpers.ConvertToTime(dateEndString)
+	}
+
+	resultByInterval := filterIpoteciByInterval(dateStart, dateEnd)
+	resultByJudet := filterIpoteciByJudet(resultByInterval, judet)
+	result := filterIpoteciByActive(resultByJudet, active)
 	json.NewEncoder(w).Encode(result)
 }

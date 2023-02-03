@@ -21,7 +21,7 @@ func (data *VanzariStateData) printData() string {
 
 func CreateVanzariData(row []string) VanzariStateData {
 	return VanzariStateData{
-		Name:            row[1],
+		Name:            helpers.ReplaceSpecialCharacters(row[1]),
 		Agricol:         helpers.ConvertToInt(row[2]),
 		Neagricol:       helpers.ConvertToInt(row[3]),
 		Constructie:     helpers.ConvertToInt(row[4]),

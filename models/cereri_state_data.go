@@ -22,8 +22,8 @@ func CreateCereriData(row []string) CereriStateData {
 	online := helpers.ConvertToInt(row[3])
 	ghiseu := helpers.ConvertToInt(row[4])
 	return CereriStateData{
-		Name:        row[1],
-		RequestType: getRequestType(row[2]),
+		Name:        helpers.ReplaceSpecialCharacters(row[1]),
+		RequestType: GetRequestType(row[2]),
 		Online:      online,
 		Ghiseu:      ghiseu,
 		Total:       online + ghiseu,
