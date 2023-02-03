@@ -1,4 +1,4 @@
-package api
+package ipoteci
 
 import (
 	"encoding/json"
@@ -10,6 +10,8 @@ import (
 	"com.butiricristian/ancpi-data-provider/data"
 	"com.butiricristian/ancpi-data-provider/helpers"
 	"com.butiricristian/ancpi-data-provider/models"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
 func filterIpoteciByInterval(dateStart time.Time, dateEnd time.Time) map[time.Time][]*models.IpoteciStateData {
@@ -56,24 +58,59 @@ func filterIpoteciByActive(result map[time.Time][]*models.IpoteciStateData, acti
 	return newResult
 }
 
-func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	judet := request.QueryStringParameters["judet"]
+	active := request.QueryStringParameters["ipoteciActive"]
+	dateStartString := request.QueryStringParameters["dateStart"]
+	dateEndString := request.QueryStringParameters["dateEnd"]
+
+	result := handleGetIpoteciData(judet, active, dateStartString, dateEndString)
+	jsonResult, err := json.Marshal(result)
+	if err != nil {
+		return &events.APIGatewayProxyResponse{
+			StatusCode: 500,
+			Body:       string(jsonResult),
+		}, fmt.Errorf("error while marshalling ipoteci to JSON")
+	}
+
+	return &events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       string(jsonResult),
+	}, nil
+}
+
+func handleGetIpoteciData(judet string, activeString string, dateStartString string, dateEndString string) map[time.Time]*models.IpoteciStateData {
 	fmt.Println("Getting Ipoteci Data")
-	judet := r.URL.Query().Get("judet")
-	active, err := strconv.ParseBool(r.URL.Query().Get("active"))
+	active, err := strconv.ParseBool(activeString)
 	if err != nil {
 		active = true
 	}
 	var dateStart time.Time
 	var dateEnd time.Time
-	if dateStartString := r.URL.Query().Get("dateStart"); dateStartString != "" {
+	if dateStartString != "" {
 		dateStart = helpers.ConvertToTime(dateStartString)
 	}
-	if dateEndString := r.URL.Query().Get("dateEnd"); dateEndString != "" {
+	if dateEndString != "" {
 		dateEnd = helpers.ConvertToTime(dateEndString)
 	}
 
 	resultByInterval := filterIpoteciByInterval(dateStart, dateEnd)
 	resultByJudet := filterIpoteciByJudet(resultByInterval, judet)
 	result := filterIpoteciByActive(resultByJudet, active)
+	return result
+}
+
+func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
+	judet := r.URL.Query().Get("judet")
+	active := r.URL.Query().Get("ipoteciActive")
+	dateStartString := r.URL.Query().Get("dateStart")
+	dateEndString := r.URL.Query().Get("dateEnd")
+
+	result := handleGetIpoteciData(judet, active, dateStartString, dateEndString)
 	json.NewEncoder(w).Encode(result)
+}
+
+func main() {
+	go data.PrepareData()
+	lambda.Start(handler)
 }

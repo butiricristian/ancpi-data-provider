@@ -7,12 +7,13 @@ import (
 )
 
 type VanzariStateData struct {
-	Name            string
-	Agricol         int
-	Neagricol       int
-	Constructie     int
-	FaraConstructie int
-	Total           int
+	Name               string
+	Agricol            int
+	Neagricol          int
+	Constructie        int
+	FaraConstructie    int
+	UnitatiIndividuale int
+	Total              int
 }
 
 func (data *VanzariStateData) printData() string {
@@ -21,11 +22,12 @@ func (data *VanzariStateData) printData() string {
 
 func CreateVanzariData(row []string) VanzariStateData {
 	return VanzariStateData{
-		Name:            helpers.ReplaceSpecialCharacters(row[1]),
-		Agricol:         helpers.ConvertToInt(row[2]),
-		Neagricol:       helpers.ConvertToInt(row[3]),
-		Constructie:     helpers.ConvertToInt(row[4]),
-		FaraConstructie: helpers.ConvertToInt(row[5]),
-		Total:           helpers.ConvertToInt(row[7]),
+		Name:               helpers.ReplaceSpecialCharacters(row[1]),
+		Agricol:            helpers.ConvertToInt(row[2]),
+		Neagricol:          helpers.ConvertToInt(row[3]),
+		Constructie:        helpers.ConvertToInt(row[4]),
+		FaraConstructie:    helpers.ConvertToInt(row[5]),
+		UnitatiIndividuale: helpers.ConvertToInt(row[6]),
+		Total:              helpers.ConvertToInt(row[7]),
 	}
 }

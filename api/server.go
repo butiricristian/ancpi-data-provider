@@ -4,15 +4,18 @@ import (
 	"fmt"
 	"net/http"
 
+	"com.butiricristian/ancpi-data-provider/netlify/functions/cereri"
+	"com.butiricristian/ancpi-data-provider/netlify/functions/ipoteci"
+	"com.butiricristian/ancpi-data-provider/netlify/functions/vanzari"
 	"github.com/rs/cors"
 )
 
 func StartServer() {
 	mux := &http.ServeMux{}
 
-	mux.HandleFunc("/cereri", GetCereriData)
-	mux.HandleFunc("/ipoteci", GetIpoteciData)
-	mux.HandleFunc("/vanzari", GetVanzariData)
+	mux.HandleFunc("/cereri", cereri.GetCereriData)
+	mux.HandleFunc("/ipoteci", ipoteci.GetIpoteciData)
+	mux.HandleFunc("/vanzari", vanzari.GetVanzariData)
 
 	fmt.Println("Listening on port 8080...")
 	cors := cors.New(cors.Options{

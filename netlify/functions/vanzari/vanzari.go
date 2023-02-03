@@ -1,4 +1,4 @@
-package api
+package vanzari
 
 import (
 	"encoding/json"
@@ -9,6 +9,8 @@ import (
 	"com.butiricristian/ancpi-data-provider/data"
 	"com.butiricristian/ancpi-data-provider/helpers"
 	"com.butiricristian/ancpi-data-provider/models"
+	"github.com/aws/aws-lambda-go/events"
+	"github.com/aws/aws-lambda-go/lambda"
 )
 
 func filterVanzariByInterval(dateStart time.Time, dateEnd time.Time) map[time.Time][]*models.VanzariStateData {
@@ -40,19 +42,52 @@ func filterVanzariByJudet(result map[time.Time][]*models.VanzariStateData, judet
 	return newResult
 }
 
-func GetVanzariData(w http.ResponseWriter, r *http.Request) {
+func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
+	judet := request.QueryStringParameters["judet"]
+	dateStartString := request.QueryStringParameters["dateStart"]
+	dateEndString := request.QueryStringParameters["dateEnd"]
+
+	result := handleGetVanzariData(judet, dateStartString, dateEndString)
+	jsonResult, err := json.Marshal(result)
+	if err != nil {
+		return &events.APIGatewayProxyResponse{
+			StatusCode: 500,
+			Body:       string(jsonResult),
+		}, fmt.Errorf("error while marshalling ipoteci to JSON")
+	}
+
+	return &events.APIGatewayProxyResponse{
+		StatusCode: 200,
+		Body:       string(jsonResult),
+	}, nil
+}
+
+func handleGetVanzariData(judet string, dateStartString string, dateEndString string) map[time.Time]*models.VanzariStateData {
 	fmt.Println("Getting Vanzari Data")
-	judet := r.URL.Query().Get("judet")
 	var dateStart time.Time
 	var dateEnd time.Time
-	if dateStartString := r.URL.Query().Get("dateStart"); dateStartString != "" {
+	if dateStartString != "" {
 		dateStart = helpers.ConvertToTime(dateStartString)
 	}
-	if dateEndString := r.URL.Query().Get("dateEnd"); dateEndString != "" {
+	if dateEndString != "" {
 		dateEnd = helpers.ConvertToTime(dateEndString)
 	}
 
 	resultByInterval := filterVanzariByInterval(dateStart, dateEnd)
 	result := filterVanzariByJudet(resultByInterval, judet)
+	return result
+}
+
+func GetVanzariData(w http.ResponseWriter, r *http.Request) {
+	judet := r.URL.Query().Get("judet")
+	dateStartString := r.URL.Query().Get("dateStart")
+	dateEndString := r.URL.Query().Get("dateEnd")
+
+	result := handleGetVanzariData(judet, dateStartString, dateEndString)
 	json.NewEncoder(w).Encode(result)
+}
+
+func main() {
+	go data.PrepareData()
+	lambda.Start(handler)
 }

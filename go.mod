@@ -8,7 +8,9 @@ require (
 	golang.org/x/net v0.5.0
 )
 
-require github.com/rs/cors v1.8.3 // indirect
+require github.com/rs/cors v1.8.3
+
+require github.com/aws/aws-lambda-go v1.37.0 // indirect
 
 require (
 	github.com/mattn/go-runewidth v0.0.14 // indirect
