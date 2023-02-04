@@ -1,21 +1,49 @@
 package api
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 
-	"com.butiricristian/ancpi-data-provider/netlify/functions/cereri"
-	"com.butiricristian/ancpi-data-provider/netlify/functions/ipoteci"
-	"com.butiricristian/ancpi-data-provider/netlify/functions/vanzari"
+	"com.butiricristian/ancpi-data-provider/controllers"
 	"github.com/rs/cors"
 )
+
+func GetCereriData(w http.ResponseWriter, r *http.Request) {
+	judet := r.URL.Query().Get("judet")
+	requestType := r.URL.Query().Get("requestType")
+	dateStartString := r.URL.Query().Get("dateStart")
+	dateEndString := r.URL.Query().Get("dateEnd")
+
+	result := controllers.HandleGetCereriData(judet, requestType, dateStartString, dateEndString)
+	json.NewEncoder(w).Encode(result)
+}
+
+func GetIpoteciData(w http.ResponseWriter, r *http.Request) {
+	judet := r.URL.Query().Get("judet")
+	active := r.URL.Query().Get("ipoteciActive")
+	dateStartString := r.URL.Query().Get("dateStart")
+	dateEndString := r.URL.Query().Get("dateEnd")
+
+	result := controllers.HandleGetIpoteciData(judet, active, dateStartString, dateEndString)
+	json.NewEncoder(w).Encode(result)
+}
+
+func GetVanzariData(w http.ResponseWriter, r *http.Request) {
+	judet := r.URL.Query().Get("judet")
+	dateStartString := r.URL.Query().Get("dateStart")
+	dateEndString := r.URL.Query().Get("dateEnd")
+
+	result := controllers.HandleGetVanzariData(judet, dateStartString, dateEndString)
+	json.NewEncoder(w).Encode(result)
+}
 
 func StartServer() {
 	mux := &http.ServeMux{}
 
-	mux.HandleFunc("/cereri", cereri.GetCereriData)
-	mux.HandleFunc("/ipoteci", ipoteci.GetIpoteciData)
-	mux.HandleFunc("/vanzari", vanzari.GetVanzariData)
+	mux.HandleFunc("/cereri", GetCereriData)
+	mux.HandleFunc("/ipoteci", GetIpoteciData)
+	mux.HandleFunc("/vanzari", GetVanzariData)
 
 	fmt.Println("Listening on port 8080...")
 	cors := cors.New(cors.Options{

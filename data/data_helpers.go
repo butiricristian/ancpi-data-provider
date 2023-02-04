@@ -19,8 +19,7 @@ func openFile(fileName string) (*os.File, error) {
 	return f, nil
 }
 
-func saveToFile(data []*models.MonthlyData) {
-	fileName := "data/data.json"
+func saveToFile(fileName string, data []*models.MonthlyData) {
 	dataFile, err := openFile(fileName)
 	if err != nil {
 		fmt.Println(err)
@@ -36,23 +35,22 @@ func saveToFile(data []*models.MonthlyData) {
 	dataFile.Write(dataBytes)
 }
 
-func scrapeAllData() []*models.MonthlyData {
+func scrapeAllData(fileName string) []*models.MonthlyData {
 	excelUrls := parserjob.FindAllExcelUrls()
 	data := parserjob.GetDataFromExcels(excelUrls)
 
-	saveToFile(data)
+	saveToFile(fileName, data)
 	return data
 }
 
 var Data []*models.MonthlyData
 
-func PrepareData() {
+func PrepareData(fileName string) {
 	fmt.Println("Preparing data...")
-	fileName := "data/data.json"
 	fileData, err := os.ReadFile(fileName)
 	if errors.Is(err, os.ErrNotExist) {
 		fmt.Println("File data.json not found. Starting scraping...")
-		Data = scrapeAllData()
+		Data = scrapeAllData(fileName)
 		fmt.Println("Data retrieved from scraping")
 		return
 	} else if err != nil {

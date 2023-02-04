@@ -12,6 +12,6 @@ func main() {
 	now := time.Now()
 	fmt.Printf("Hello World! %v\n", now)
 
-	go data.PrepareData()
+	go data.PrepareData("data/data.json")
 	api.StartServer()
 }
