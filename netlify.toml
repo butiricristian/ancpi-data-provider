@@ -1,2 +1,2 @@
 [functions]
-  included_files=["data.json"]
+  included_files=["data.json", "**/**.json"]
