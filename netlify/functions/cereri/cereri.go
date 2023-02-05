@@ -21,7 +21,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: 500,
-			Body:       string(jsonResult),
+			Body:       string(err.Error()),
 			Headers:    map[string]string{"access-control-allow-origin": "*"},
 		}, fmt.Errorf("error while marshalling ipoteci to JSON")
 	}
@@ -34,6 +34,6 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 }
 
 func main() {
-	data.PrepareData("../../../data/data.json")
+	data.PrepareData("data.json")
 	lambda.Start(handler)
 }
