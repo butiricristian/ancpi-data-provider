@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"io"
+	"net/http"
 	"os"
 
 	"com.butiricristian/ancpi-data-provider/models"
@@ -59,5 +61,31 @@ func PrepareData(fileName string) {
 	}
 
 	json.Unmarshal(fileData, &Data)
+	fmt.Println("Data retrieved from data.json")
+}
+
+func getDataUrl() string {
+	if os.Getenv("APP_ENV") == "production" {
+		return "https://ancpi-data-provider.netlify.app/data/data.json"
+	}
+	return "http://localhost:8888/data/data.json"
+}
+
+func PrepareDataFromUrl() {
+	url := getDataUrl()
+	fmt.Printf("Reading data from %s\n", url)
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Printf("An error occured while retrieving the page: %v", err)
+		return
+	}
+
+	data, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Printf("An error occured while reading the page: %v", err)
+		return
+	}
+
+	json.Unmarshal(data, &Data)
 	fmt.Println("Data retrieved from data.json")
 }

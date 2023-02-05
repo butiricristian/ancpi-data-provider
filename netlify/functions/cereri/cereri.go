@@ -34,6 +34,6 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 }
 
 func main() {
-	data.PrepareData("./../data.json")
+	data.PrepareDataFromUrl()
 	lambda.Start(handler)
 }
