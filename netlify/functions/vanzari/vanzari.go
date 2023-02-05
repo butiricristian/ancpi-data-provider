@@ -21,6 +21,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 		return &events.APIGatewayProxyResponse{
 			StatusCode: 500,
 			Body:       fmt.Sprintf("error: %+v", err),
+			Headers:    map[string]string{"access-control-allow-origin": "*"},
 		}, fmt.Errorf("error while marshalling ipoteci to JSON")
 	}
 
