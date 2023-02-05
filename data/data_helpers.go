@@ -65,10 +65,11 @@ func PrepareData(fileName string) {
 }
 
 func getDataUrl() string {
-	if os.Getenv("APP_ENV") == "production" {
-		return "https://ancpi-data-provider.netlify.app/data/data.json"
-	}
-	return "http://localhost:8888/data/data.json"
+	// if os.Getenv("APP_ENV") == "production" {
+	// 	return "https://ancpi-data-provider.netlify.app/data/data.json"
+	// }
+	// return "http://localhost:8888/data/data.json"
+	return "https://ancpi-data-provider.netlify.app/data/data.json"
 }
 
 func PrepareDataFromUrl() {
