@@ -42,6 +42,9 @@ func filterCereriByJudet(result map[time.Time][]*models.CereriStateData, judet s
 }
 
 func filterCereriByRequestType(result map[time.Time][]*models.CereriStateData, requestType models.RequestType) map[time.Time]*models.CereriStateData {
+	if requestType == models.UNDEFINED {
+		requestType = models.TOTAL
+	}
 	newResult := map[time.Time]*models.CereriStateData{}
 	for key, data := range result {
 		for _, val := range data {

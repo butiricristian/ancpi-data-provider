@@ -12,6 +12,7 @@ const (
 	INFORMARE
 	INSCRIERE
 	RECEPTIE
+	TOTAL
 	UNDEFINED
 )
 
@@ -25,6 +26,8 @@ func (rt RequestType) String() string {
 		return "Inscriere"
 	case RECEPTIE:
 		return "Receptie"
+	case TOTAL:
+		return "Total"
 	}
 	return "Unknown"
 }
@@ -46,7 +49,7 @@ func (rt *RequestType) UnmarshalJSON(data []byte) error {
 }
 
 func GetRequestType(val string) RequestType {
-	switch val {
+	switch strings.ToLower(val) {
 	case "altele":
 		return ALTELE
 	case "informare":
@@ -55,6 +58,8 @@ func GetRequestType(val string) RequestType {
 		return INSCRIERE
 	case "receptie":
 		return RECEPTIE
+	case "total":
+		return TOTAL
 	}
 	return UNDEFINED
 }

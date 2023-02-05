@@ -2,6 +2,7 @@ package parserjob
 
 import (
 	"fmt"
+	"strings"
 	"sync"
 
 	"com.butiricristian/ancpi-data-provider/helpers"
@@ -64,20 +65,55 @@ func parseExcelIpoteci(rows [][]string) []*models.IpoteciStateData {
 
 func parseExcelCereri(rows [][]string) []*models.CereriStateData {
 	HEADER_ROWS := getNrOfHeaders(rows)
-	nrRows := 42*4 + 1
-	var data []*models.CereriStateData = make([]*models.CereriStateData, nrRows)
+	nrRows := 42 * 5
+	var data []*models.CereriStateData = make([]*models.CereriStateData, nrRows+5)
+	currentTotalOnline := 0
+	currentTotalGhiseu := 0
+	totalOnline := map[string]int{"altele": 0, "informare": 0, "receptie": 0, "inscriere": 0, "total": 0}
+	totalGhiseu := map[string]int{"altele": 0, "informare": 0, "receptie": 0, "inscriere": 0, "total": 0}
 
 	for i := 0; i < nrRows; i++ {
-		row := rows[i+HEADER_ROWS]
-		if len(row) <= 2 {
-			continue
-		}
-		if row[1] == "" {
-			row[1] = rows[i/4*4+HEADER_ROWS][1]
+		var row []string
+		rowIndex := i/5*4 + i%5
+		stateName := rows[i/5*4+HEADER_ROWS][1]
+
+		if i%5 == 4 {
+			row = []string{"", stateName, "Total", fmt.Sprint(currentTotalOnline), fmt.Sprint(currentTotalGhiseu), fmt.Sprint(currentTotalOnline + currentTotalGhiseu)}
+			currentTotalGhiseu = 0
+			currentTotalOnline = 0
+		} else {
+			row = rows[rowIndex+HEADER_ROWS]
+			if len(row) <= 2 {
+				continue
+			}
+			if row[1] == "" {
+				row[1] = stateName
+			}
+			currentTotalOnline += helpers.ConvertToInt(row[3])
+			currentTotalGhiseu += helpers.ConvertToInt(row[4])
+			totalOnline[strings.ToLower(row[2])] += helpers.ConvertToInt(row[3])
+			totalGhiseu[strings.ToLower(row[2])] += helpers.ConvertToInt(row[4])
+			totalOnline["total"] += helpers.ConvertToInt(row[3])
+			totalGhiseu["total"] += helpers.ConvertToInt(row[4])
 		}
 
 		currentData := models.CreateCereriData(row)
 		data[i] = &currentData
+	}
+
+	// Store Total number of requests at national level
+	i := 0
+	for key := range totalOnline {
+		currentData := models.CreateCereriData([]string{
+			"",
+			"TOTAL",
+			key,
+			fmt.Sprint(totalOnline[key]),
+			fmt.Sprint(totalGhiseu[key]),
+			fmt.Sprint(totalGhiseu[key] + totalOnline[key]),
+		})
+		data[nrRows+i] = &currentData
+		i += 1
 	}
 
 	return data
