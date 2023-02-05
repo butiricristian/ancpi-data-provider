@@ -85,7 +85,14 @@ func PrepareDataFromUrl() {
 		fmt.Printf("An error occured while reading the page: %v", err)
 		return
 	}
+	fmt.Println(data)
 
-	json.Unmarshal(data, &Data)
+	err = json.Unmarshal(data, &Data)
+	if err != nil {
+		fmt.Printf("An error occured while unmarshaling the page: %v", err)
+		return
+	}
+	fmt.Println(Data)
+
 	fmt.Println("Data retrieved from data.json")
 }
