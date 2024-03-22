@@ -57,7 +57,7 @@ func parseExcelIpoteci(rows [][]string) []*models.IpoteciStateData {
 
 		var currentDataActive models.IpoteciStateData
 		var currentDataInactive models.IpoteciStateData
-		if len(row) > 8 {
+		if len(row) > 9 {
 			currentDataActive, currentDataInactive = models.CreateIpoteciData(row)
 		} else {
 			currentDataActive, currentDataInactive = models.CreateIpoteciDataV2(row)
